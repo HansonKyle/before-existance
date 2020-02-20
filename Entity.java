@@ -87,7 +87,7 @@ public class Entity {
 	
 	public int getHealthCap() {
 		int healthCapCopy = healthCap;
-		return healthCap;
+		return healthCapCopy;
 	}
 
 	public void setHealthCap(int healthCap) {

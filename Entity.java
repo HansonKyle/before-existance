@@ -51,7 +51,7 @@ public class Entity {
 		return nameCopy;
 	}
 	
-	public HealthBar(int healthCap) {
+	public void HealthBar(int healthCap) {
 		this.healthCap = healthCap;
 		this.health = healthCap;
 	}

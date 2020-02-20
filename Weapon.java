@@ -1,10 +1,10 @@
 public class Weapon extends Equippable{
-	private double damage;
+	private int damage;
 
-	public double getDamage() {
+	public int getDamage() {
 		return damage;
 	}
-	public void setDamage(double damage) {
+	public void setDamage(int damage) {
 		this.damage = damage;
 	}
 }

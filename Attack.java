@@ -1,4 +1,3 @@
-
 public class Attack {
 	// Two entities one being the target of the attack and one being the attacker or source of damage
 	private Entity target;
@@ -21,6 +20,6 @@ public class Attack {
 		this.attacker = attacker;
 	}
 	public void attacking(Entity attacker, Entity target) {
-		target.setHealth(target.getHealth() - attacker.getAttack());
+		target.setHealth(target.getHealth() - attacker.getCurrentWeapon().getDamage());
 	}
 }

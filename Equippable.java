@@ -1,10 +1,10 @@
 public class Equippable extends Item {
 	private Boolean equipState = false;
 	
-	public void equipItem(Item i){
+	public void equipItem(){
 		equipState = true;
 	}
-	public void unequipItem(Item i) {
+	public void unequipItem() {
 		equipState = false;
 	}
 	public Boolean getEquipState() {

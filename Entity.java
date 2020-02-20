@@ -18,6 +18,7 @@ public class Entity {
 		} else {
 			healthCap = 1;
 			health = 1;
+		}
 	}
 	
 	public void addAttack(int addition) {
@@ -105,6 +106,6 @@ public class Entity {
 		}
 	}
 	public String toString() {
-		return name + "Attack: " + attack + "| Health: " + health + "/" + healthCap + "(" + getPercentage() + ")"
+		return name + "Attack: " + attack + "| Health: " + health + "/" + healthCap + "(" + getPercentage() + ")";
 	}
 }

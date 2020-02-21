@@ -6,7 +6,9 @@ public class HealthBar {
 		this.entity = entity;
 	}
 
-	public void update() {}
+	public void update() {
+		
+	}
 	
 	public double getPercentage() {
 		return 100.0 * entity.getHealth() / entity.getHealthCap();

@@ -1,4 +1,5 @@
 public class Room {
+	
 	private int roomLength;
 	private int roomWidth;
 

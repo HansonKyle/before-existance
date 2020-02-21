@@ -1,7 +1,7 @@
 public class Game {
 	
 	private final Input input = new Input();
-	private final Player player = new Player("Username");
+	private final Player player = new Player("Username", 100);
 	private final Menu menu;
 	
 	public Game() {

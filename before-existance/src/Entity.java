@@ -4,12 +4,16 @@ public class Entity {
 	private int health;
 	private int healthCap;
 	private HealthBar healthBar;
-	private Weapon weapon;
+	private Weapon currentWeapon;
 	
-	public Entity(String name, int healthCap, Weapon weapon) {
+	public Entity(String name, int healthCap) {
 		this.name = name;
 		this.healthBar = new HealthBar(this);
-		this.weapon = weapon;
+	}
+	
+	public Entity(String name, int healthCap,  Weapon currentWeapon) {
+		this(name, healthCap);
+		this.currentWeapon = currentWeapon;
 	}
 	
 	public String getName() {
@@ -65,11 +69,11 @@ public class Entity {
 		return healthBar;
 	}
 	
-	public Weapon getWeapon() {
-		return weapon;
+	public Weapon getCurrentWeapon() {
+		return currentWeapon;
 	}
 	
-	public void setWeapon(Weapon weapon) {
-		this.weapon = weapon;
+	public void setCurrentWeapon(Weapon currentWeapon) {
+		this.currentWeapon = currentWeapon;
 	}
 }

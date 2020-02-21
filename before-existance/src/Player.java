@@ -5,6 +5,10 @@ public class Player extends Entity {
 	private ArrayList<Item> inventory = new ArrayList<Item>();
 	private ArrayList<Spell> spellbook = new ArrayList<Spell>();
 	
+	public Player(String name, int healthCap, Weapon weapon) {
+		super(name, healthCap, weapon);
+	}
+	
 	public Player(String name, int healthCap) {
 		super(name, healthCap);
 	}

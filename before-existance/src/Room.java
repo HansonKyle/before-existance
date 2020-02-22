@@ -9,7 +9,7 @@ public class Room {
 	}
 
 	public Room() {
-		int roomAdjustmentConstant = 10; // Arbitrary until room size needs to be converted into pixels
+		int roomAdjustmentConstant = 20; // Arbitrary until room size needs to be converted into pixels
 		double randomNumberLength = Math.random();
 		double randomNumberWidth = Math.random();
 		roomLength = (int) (roomAdjustmentConstant * randomNumberLength);
@@ -18,6 +18,6 @@ public class Room {
 
 	@Override
 	public String toString() {
-		return "Room Length: " + roomLength + "\nRoom Width: " + roomWidth;
+		return "Room Length : " + roomLength + " | Room Width  : " + roomWidth;
 	}
 }

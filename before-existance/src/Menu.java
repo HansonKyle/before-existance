@@ -6,8 +6,7 @@ public class Menu extends Event {
 		super.addChoice(new Choice(1, "Start Game") {
 			@Override
 			public void activate() {
-				Story mainStory = new Story(game, 10);
-				mainStory.playerInitialize();
+				Story mainStory = new Story(game, 3);
 				mainStory.start();
 			}
 		});

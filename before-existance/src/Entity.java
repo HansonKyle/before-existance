@@ -9,6 +9,8 @@ public class Entity {
 	public Entity(String name, int healthCap) {
 		this.name = name;
 		this.healthBar = new HealthBar(this);
+		this.healthCap = healthCap;
+		this.health = healthCap;
 	}
 	
 	public Entity(String name, int healthCap,  Weapon currentWeapon) {
@@ -26,7 +28,7 @@ public class Entity {
 	
 	@Override
 	public String toString() {
-		return name.toUpperCase() + "\n" + healthBar.toString();
+		return name.toUpperCase() + " | " + healthBar.toString();
 	}
 	
 	public void replenishHealth() {

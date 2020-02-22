@@ -1,8 +1,12 @@
 public class Equippable extends Item {
 	
+	public Equippable(String name) {
+		super(name);
+	}
+
 	private Boolean equipState = false;
 	
-	public void equipItem(){
+	public void equipItem() {
 		equipState = true;
 	}
 	

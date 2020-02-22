@@ -17,15 +17,15 @@ public class Attack {
 		this.target = target;
 	}
 	
-	public Entity getattacker() {
+	public Entity getAttacker() {
 		return attacker;
 	}
 	
-	public void setattacker(Entity attacker) {
+	public void setAttacker(Entity attacker) {
 		this.attacker = attacker;
 	}
 	
-	public void attacking(Entity attacker, Entity target) {
-		target.setHealth(target.getHealth() - attacker.getCurrentWeapon().getDamage());
+	public void attack(Entity attacker, Entity target) {
+		target.removeHealth(attacker.getCurrentWeapon().getDamage());
 	}
 }

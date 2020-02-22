@@ -1,11 +1,15 @@
 import java.util.Scanner;
+
 public class Story {
 
+	private Game game;
 	private int numOfEvents;
 
-	public Story(int events) {
+	public Story(Game game, int events) {
+		this.game = game;
 		numOfEvents = events;
 	}
+	
 	public void playerInitialize() {
 		System.out.println("Enter your name: ");
 		Scanner keyboard = new Scanner(System.in);
@@ -17,7 +21,7 @@ public class Story {
 		double randomRoom = Math.random();
 		double randomChance = Math.random();
 		if (randomRoom <= 0.2) {
-			Event second = new Event(null, "Nothing");
+			Event second = new Event(game, "Nothing");
 			second.addChoice(new Choice(1, "Go through door") {
 				public void activate() {
 					if (randomChance <= 0.15) {
@@ -28,6 +32,7 @@ public class Story {
 					}
 				}
 			});
+			second.displayChoices();
 		} else if (randomRoom <= 0.4) {
 			// generate other type of room
 		} else if (randomRoom <= 0.6) {
@@ -41,14 +46,16 @@ public class Story {
 
 	public void start() {
 		Room startingRoom = new Room(5, 5);
-		System.out.println(startingRoom.toString());
-		Event first = new Event(null, "Nothing");
-		//Menu startingMenu = new Menu(this);
+		System.out.println(startingRoom);
+		
+		Event first = new Event(game, "Nothing");
 		first.addChoice(new Choice(1, "Go through door") {
 			public void activate() {
 					System.out.println("You open the door and walk into the next room.");
 			}
 		});
+		first.displayChoices();
+		
 		for (int i = 0; i < numOfEvents; i++) {
 			this.nextRoom();
 		}

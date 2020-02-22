@@ -20,6 +20,15 @@ public class Event {
 		});
 	}
 	
+	public void addChoice(int i, String desc) {
+		choices.add(new Choice(i, desc) {
+			@Override
+			public void activate() {
+				
+			}
+		});
+	}
+	
 	public Choice getChoice(int key) {
 		for (Choice choice : choices) {
 			if (key == choice.getKeyBinding()) {

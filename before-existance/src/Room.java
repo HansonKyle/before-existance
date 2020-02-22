@@ -18,6 +18,6 @@ public class Room {
 
 	@Override
 	public String toString() {
-		return "Room Length: " + roomLength + "\nRoom Width: " + roomWidth;
+		return "Room Length: " + roomLength + " | Room Width: " + roomWidth;
 	}
 }

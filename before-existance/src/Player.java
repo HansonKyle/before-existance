@@ -13,10 +13,6 @@ public class Player extends Entity {
 		super(name, healthCap);
 	}
 	
-	public ArrayList<Item> getInventory() {
-		return inventory;
-	}
-	
 	public void addItem(Item i){
 		inventory.add(i);
 	}
@@ -25,11 +21,15 @@ public class Player extends Entity {
 		inventory.remove(i);
 	}
 	
-	public ArrayList<Spell> getSpellbook() {
-		return spellbook;
+	public ArrayList<Item> getInventory() {
+		return inventory;
 	}
 	
 	public void learnSpell(Spell s) {
 		spellbook.add(s);
+	}
+	
+	public ArrayList<Spell> getSpellbook() {
+		return spellbook;
 	}
 }

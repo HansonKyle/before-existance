@@ -1,3 +1,7 @@
+package event;
+import core.Game;
+import entity.Enemy;
+
 public class EnemyAppearance extends Event {
 	
 	private Enemy enemy;

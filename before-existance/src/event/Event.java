@@ -1,4 +1,7 @@
+package event;
 import java.util.ArrayList;
+
+import core.Game;
 
 public class Event {
 	

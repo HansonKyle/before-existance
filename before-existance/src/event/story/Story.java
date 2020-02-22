@@ -1,3 +1,8 @@
+package event.story;
+import core.Game;
+import event.Choice;
+import event.Event;
+
 public class Story {
 
 	private Game game;
@@ -15,18 +20,7 @@ public class Story {
 		System.out.println(randRoom.toString());
 		if (randomRoom <= 0.2) {
 			System.out.println("The room is empty");
-			Event event = new Event(game, "Nothing");
-			event.addChoice(new Choice(1, "Go through door") {
-				public void activate() {
-					if (randomChance <= 0.15) {
-						System.out.println("You pushed when you should have pulled and walked into the door. \n(-10 Health)");
-						//you.removeHealth(10);
-					} else {
-						System.out.println("You open the door and walk into the next room.");
-					}
-				}
-			});
-			event.displayChoices();
+			
 		} else if (randomRoom <= 0.4) {
 			
 			System.out.println("There lies a lone skeleton in the center of the room");

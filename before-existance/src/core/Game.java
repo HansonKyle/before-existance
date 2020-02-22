@@ -1,3 +1,7 @@
+package core;
+
+import event.Menu;
+
 public class Game {
 	
 	private final Input input = new Input();
@@ -11,10 +15,6 @@ public class Game {
 	
 	public void close() {
 		input.close();
-	}
-	
-	public Player getPlayer() {
-		return player;
 	}
 	
 	public Input getInput() {

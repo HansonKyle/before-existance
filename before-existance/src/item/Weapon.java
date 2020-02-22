@@ -1,3 +1,4 @@
+package item;
 public class Weapon extends Equippable {
 	
 	private int damage;

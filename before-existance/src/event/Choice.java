@@ -1,3 +1,4 @@
+package event;
 public abstract class Choice {
 	
 	private int keyBinding;

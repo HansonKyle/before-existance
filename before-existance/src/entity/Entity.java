@@ -1,3 +1,6 @@
+package entity;
+import item.Weapon;
+
 public class Entity {
 	
 	private String name;

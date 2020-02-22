@@ -1,4 +1,9 @@
+package entity;
 import java.util.ArrayList;
+
+import item.Item;
+import item.Spell;
+import item.Weapon;
 
 public class Player extends Entity {
 	

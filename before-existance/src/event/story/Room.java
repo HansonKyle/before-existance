@@ -1,3 +1,4 @@
+package event.story;
 public class Room {
 	
 	private int roomLength;

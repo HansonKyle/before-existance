@@ -1,3 +1,7 @@
+package event;
+import core.Game;
+import event.story.Story;
+
 public class Menu extends Event {
 	
 	public Menu(Game game) {
@@ -6,6 +10,7 @@ public class Menu extends Event {
 		super.addChoice(new Choice(1, "Start Game") {
 			@Override
 			public void activate() {
+				System.out.println("Random");
 				Story mainStory = new Story(game, 3);
 				mainStory.start();
 			}

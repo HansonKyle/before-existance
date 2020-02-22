@@ -1,3 +1,4 @@
+package item;
 public class Consumable extends Item {
 	
 	public Consumable(String name) {

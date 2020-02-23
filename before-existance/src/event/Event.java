@@ -5,13 +5,15 @@ import core.Game;
 
 public class Event {
 	
+	private final ArrayList<Choice> choices = new ArrayList<>();
 	private Game game;
 	private String name;
-	private ArrayList<Choice> choices = new ArrayList<>();
-	
-	public Event(Game game, String name) {
+	private String description;
+
+	public Event(Game game, String name, String description) {
 		this.game = game;
 		this.name = name;
+		this.description = description;
 	}
 	
 	public void addChoice(Choice choice) {
@@ -19,15 +21,6 @@ public class Event {
 			@Override
 			public void activate() {
 				choice.activate();
-			}
-		});
-	}
-	
-	public void addChoice(int i, String desc) {
-		choices.add(new Choice(i, desc) {
-			@Override
-			public void activate() {
-				
 			}
 		});
 	}
@@ -55,16 +48,22 @@ public class Event {
 	}
 	
 	public void displayChoices() {
-		for (Choice choice : choices) {
-			System.out.println(choice);
+		if (choices.size() > 0) {
+			System.out.println("----------------------------------");
+			for (Choice choice : choices) {
+				System.out.println(choice);
+			}
 		}
-		requestChoice();
 	}
 	
 	public void requestChoice() {
-		int key = game.getInput().requestInt(getValidKeys());
-		Choice chosen = getChoice(key);
-		chosen.activate();
+		if (choices.size() > 0) {
+			System.out.println("----------------------------------");
+			System.out.println("Enter your choice: ");
+			int key = game.getInput().requestInt(getValidKeys());
+			Choice chosen = getChoice(key);
+			chosen.activate();
+		}
 	}
 	
 	@Override
@@ -78,5 +77,13 @@ public class Event {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public String getDescription() {
+		return description;
+	}
+	
+	public void setDescription(String description) {
+		this.description = description;
 	}
 }

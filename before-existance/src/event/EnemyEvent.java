@@ -2,12 +2,12 @@ package event;
 import core.Game;
 import entity.Enemy;
 
-public class EnemyAppearance extends Event {
+public class EnemyEvent extends Event {
 	
 	private Enemy enemy;
 
-	public EnemyAppearance(Game game, Enemy enemy) {
-		super(game, "A wild " + enemy.getName() + " has appeared!");
+	public EnemyEvent(Game game, Enemy enemy) {
+		super(game, "Enemy Appeared", "A wild " + enemy.getName() + " has appeared!");
 		this.enemy = enemy;
 		
 		super.addChoice(new Choice(1, "Attack") {

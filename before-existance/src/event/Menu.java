@@ -5,13 +5,12 @@ import event.story.Story;
 public class Menu extends Event {
 	
 	public Menu(Game game) {
-		super(game, "Dungeon Crawler");
+		super(game, "Menu", "Dungeon Crawler");
 		
 		super.addChoice(new Choice(1, "Start Game") {
 			@Override
 			public void activate() {
-				System.out.println("Random");
-				Story mainStory = new Story(game, 3);
+				Story mainStory = new Story(game, 4);
 				mainStory.start();
 			}
 		});

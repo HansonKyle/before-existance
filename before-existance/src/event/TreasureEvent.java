@@ -31,7 +31,6 @@ public class TreasureEvent extends Event {
 				
 				if (randomChance <= 0.15) {
 					System.out.println("Just before you leave the room, you hear the chest move and growl. You made a good choice leaving the chest alone.");
-					//you.removeHealth(10);
 				} else if (randomChance <= 50) {
 					System.out.println("Just before you leave the room, another person enters through the door you came from and opens the chest. They take out a wand and immediately teleport away. Weird.");
 				} else {

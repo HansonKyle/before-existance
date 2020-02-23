@@ -25,6 +25,7 @@ public class Game {
 	}
 	
 	public void displayMenu() {
+		System.out.println("| DUNGEON CRAWLER |");
 		System.out.println(menu);
 		menu.displayChoices();
 		menu.requestChoice();
@@ -40,5 +41,9 @@ public class Game {
 	
 	public Player getPlayer() {
 		return player;
+	}
+	
+	public void setPlayer(Player player) {
+		this.player = player;
 	}
 }

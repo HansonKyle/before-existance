@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="core.Game" project="before-existance" file="/before-existance/src/core/Game.java" 
+  <class id="1" language="java" name="core.Game" project="DungeonCrawler" file="/DungeonCrawler/src/core/Game.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="559" y="240"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -10,8 +10,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="core.Input" project="before-existance" 
-    file="/before-existance/src/core/Input.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="2" language="java" name="core.Input" project="DungeonCrawler" file="/DungeonCrawler/src/core/Input.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="339" y="239"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -19,7 +19,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="core.Main" project="before-existance" file="/before-existance/src/core/Main.java" 
+  <class id="3" language="java" name="core.Main" project="DungeonCrawler" file="/DungeonCrawler/src/core/Main.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="559" y="78"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -28,8 +28,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="entity.Attack" project="before-existance" 
-    file="/before-existance/src/entity/Attack.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="4" language="java" name="entity.Attack" project="DungeonCrawler" 
+    file="/DungeonCrawler/src/entity/Attack.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="15" y="633"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -37,8 +37,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="entity.Entity" project="before-existance" 
-    file="/before-existance/src/entity/Entity.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="5" language="java" name="entity.Entity" project="DungeonCrawler" 
+    file="/DungeonCrawler/src/entity/Entity.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="205" y="606"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -46,8 +46,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="entity.HealthBar" project="before-existance" 
-    file="/before-existance/src/entity/HealthBar.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="6" language="java" name="entity.HealthBar" project="DungeonCrawler" 
+    file="/DungeonCrawler/src/entity/HealthBar.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="14" y="468"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -55,8 +55,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="entity.Player" project="before-existance" 
-    file="/before-existance/src/entity/Player.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="7" language="java" name="entity.Player" project="DungeonCrawler" 
+    file="/DungeonCrawler/src/entity/Player.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="121" y="906"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -64,8 +64,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="entity.Enemy" project="before-existance" 
-    file="/before-existance/src/entity/Enemy.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="8" language="java" name="entity.Enemy" project="DungeonCrawler" 
+    file="/DungeonCrawler/src/entity/Enemy.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="297" y="854"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -73,8 +73,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="event.Event" project="before-existance" 
-    file="/before-existance/src/event/Event.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="9" language="java" name="event.Event" project="DungeonCrawler" file="/DungeonCrawler/src/event/Event.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="858" y="567"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -82,8 +82,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="10" language="java" name="event.Choice" project="before-existance" 
-    file="/before-existance/src/event/Choice.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="10" language="java" name="event.Choice" project="DungeonCrawler" 
+    file="/DungeonCrawler/src/event/Choice.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1073" y="567"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -91,8 +91,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="event.BigHandEvent" project="before-existance" 
-    file="/before-existance/src/event/BigHandEvent.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="11" language="java" name="event.BigHandEvent" project="DungeonCrawler" 
+    file="/DungeonCrawler/src/event/BigHandEvent.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="905" y="844"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -100,8 +100,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="12" language="java" name="event.EmptyRoomEvent" project="before-existance" 
-    file="/before-existance/src/event/EmptyRoomEvent.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="12" language="java" name="event.EmptyRoomEvent" project="DungeonCrawler" 
+    file="/DungeonCrawler/src/event/EmptyRoomEvent.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1053" y="843"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -109,8 +109,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="13" language="java" name="event.EnemyEvent" project="before-existance" 
-    file="/before-existance/src/event/EnemyEvent.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="13" language="java" name="event.EnemyEvent" project="DungeonCrawler" 
+    file="/DungeonCrawler/src/event/EnemyEvent.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="660" y="852"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -118,8 +118,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="14" language="java" name="event.EventGenerator" project="before-existance" 
-    file="/before-existance/src/event/EventGenerator.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="14" language="java" name="event.EventGenerator" project="DungeonCrawler" 
+    file="/DungeonCrawler/src/event/EventGenerator.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="973" y="331"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -127,8 +127,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="15" language="java" name="event.FrailSkeletonEvent" project="before-existance" 
-    file="/before-existance/src/event/FrailSkeletonEvent.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="15" language="java" name="event.FrailSkeletonEvent" project="DungeonCrawler" 
+    file="/DungeonCrawler/src/event/FrailSkeletonEvent.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1215" y="842"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -136,8 +136,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="16" language="java" name="event.Menu" project="before-existance" 
-    file="/before-existance/src/event/Menu.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="16" language="java" name="event.Menu" project="DungeonCrawler" file="/DungeonCrawler/src/event/Menu.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="789" y="843"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -145,8 +145,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="17" language="java" name="event.SquirrelsEvent" project="before-existance" 
-    file="/before-existance/src/event/SquirrelsEvent.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="17" language="java" name="event.SquirrelsEvent" project="DungeonCrawler" 
+    file="/DungeonCrawler/src/event/SquirrelsEvent.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1367" y="844"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -154,8 +154,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="18" language="java" name="event.TreasureEvent" project="before-existance" 
-    file="/before-existance/src/event/TreasureEvent.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="18" language="java" name="event.TreasureEvent" project="DungeonCrawler" 
+    file="/DungeonCrawler/src/event/TreasureEvent.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1511" y="845"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -163,8 +163,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="19" language="java" name="event.story.Story" project="before-existance" 
-    file="/before-existance/src/event/story/Story.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="19" language="java" name="event.story.Story" project="DungeonCrawler" 
+    file="/DungeonCrawler/src/event/story/Story.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="977" y="184"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -172,8 +172,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="20" language="java" name="item.Armor" project="before-existance" 
-    file="/before-existance/src/item/Armor.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="20" language="java" name="item.Armor" project="DungeonCrawler" file="/DungeonCrawler/src/item/Armor.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="437" y="1503"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -181,8 +181,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="21" language="java" name="item.Consumable" project="before-existance" 
-    file="/before-existance/src/item/Consumable.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="21" language="java" name="item.Consumable" project="DungeonCrawler" 
+    file="/DungeonCrawler/src/item/Consumable.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="597" y="1285"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -190,8 +190,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="22" language="java" name="item.Equippable" project="before-existance" 
-    file="/before-existance/src/item/Equippable.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="22" language="java" name="item.Equippable" project="DungeonCrawler" 
+    file="/DungeonCrawler/src/item/Equippable.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="376" y="1317"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -199,7 +199,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="23" language="java" name="item.Item" project="before-existance" file="/before-existance/src/item/Item.java" 
+  <class id="23" language="java" name="item.Item" project="DungeonCrawler" file="/DungeonCrawler/src/item/Item.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="498" y="1112"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -208,8 +208,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="24" language="java" name="item.Weapon" project="before-existance" 
-    file="/before-existance/src/item/Weapon.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="24" language="java" name="item.Weapon" project="DungeonCrawler" file="/DungeonCrawler/src/item/Weapon.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="265" y="1502"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -217,8 +217,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="25" language="java" name="item.Spell" project="before-existance" 
-    file="/before-existance/src/item/Spell.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="25" language="java" name="item.Spell" project="DungeonCrawler" file="/DungeonCrawler/src/item/Spell.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="-107" y="906"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -226,18 +226,22 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="26">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="27" name="spellbook"/>      
-      <multiplicity id="28" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="25" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="29">    
+  <generalization id="26">    
     <end type="SOURCE" refId="21"/>    
     <end type="TARGET" refId="23"/>  
   </generalization>  
+  <association id="27">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="28" name="enemy">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="29" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <association id="30">    
     <end type="SOURCE" refId="1" navigable="false">      
       <attribute id="31" name="input">        
@@ -251,181 +255,245 @@
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="33">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="34" name="target"/>      
-      <multiplicity id="35" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="36">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="37" name="currentWeapon"/>      
-      <multiplicity id="38" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="24" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="39">    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="40" name="enemy"/>      
-      <multiplicity id="41" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="42">    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="22"/>  
-  </generalization>  
-  <generalization id="43">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="9"/>  
-  </generalization>  
-  <generalization id="44">    
-    <end type="SOURCE" refId="17"/>    
-    <end type="TARGET" refId="9"/>  
-  </generalization>  
-  <association id="45">    
-    <end type="SOURCE" refId="19" navigable="false">      
-      <attribute id="46" name="events"/>      
-      <multiplicity id="47" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="48">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="49" name="menu"/>      
-      <multiplicity id="50" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="16" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="51">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="52" name="entity"/>      
-      <multiplicity id="53" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="54">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="9"/>  
-  </generalization>  
-  <generalization id="55">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="5"/>  
-  </generalization>  
-  <association id="56">    
-    <end type="SOURCE" refId="19" navigable="false">      
-      <attribute id="57" name="player"/>      
-      <multiplicity id="58" minimum="0" maximum="1"/>    
+      <attribute id="34" name="player">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="35" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="59">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="60" name="choices"/>      
-      <multiplicity id="61" minimum="0" maximum="2147483647"/>    
+  <association id="36">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="37" name="eventGenerator">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="38" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
+    <end type="TARGET" refId="14" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="62">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="63" name="attacker"/>      
-      <multiplicity id="64" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="65">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="9"/>  
-  </generalization>  
-  <generalization id="66">    
-    <end type="SOURCE" refId="24"/>    
-    <end type="TARGET" refId="22"/>  
-  </generalization>  
-  <association id="67">    
+  <association id="39">    
     <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="68" name="healthBar"/>      
-      <multiplicity id="69" minimum="0" maximum="1"/>    
+      <attribute id="40" name="healthBar">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="41" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="70">    
+  <generalization id="42">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
+  <association id="43">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="44" name="choices">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="45" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="46">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="22"/>  
+  </generalization>  
+  <association id="47">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="48" name="target">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="49" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="50">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="51" name="currentWeapon">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="52" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="24" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="53">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
+  <association id="54">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="55" name="menu">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="56" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="57">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="58" name="attacker">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="59" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="60">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
+  <generalization id="61">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
+  <association id="62">    
     <end type="SOURCE" refId="19" navigable="false">      
-      <attribute id="71" name="game"/>      
-      <multiplicity id="72" minimum="0" maximum="1"/>    
+      <attribute id="63" name="player">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="64" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="65">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="66" name="game">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="67" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="68">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="22"/>  
+  </generalization>  
+  <generalization id="69">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
+  <association id="70">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="71" name="game">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="72" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <generalization id="73">    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="9"/>  
-  </generalization>  
-  <generalization id="74">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="9"/>  
-  </generalization>  
-  <association id="75">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="76" name="player"/>      
-      <multiplicity id="77" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="78">    
     <end type="SOURCE" refId="16"/>    
     <end type="TARGET" refId="9"/>  
   </generalization>  
+  <generalization id="74">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <association id="75">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="76" name="spellbook">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="77" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="78">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
   <association id="79">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="80" name="game"/>      
-      <multiplicity id="81" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="80" name="events">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="81" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="82">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <association id="83">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="84" name="game">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="85" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="82">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="5"/>  
-  </generalization>  
-  <association id="83">    
+  <association id="86">    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="84" name="inventory"/>      
-      <multiplicity id="85" minimum="0" maximum="2147483647"/>    
+      <attribute id="87" name="inventory">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="88" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="23" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="86">    
-    <end type="SOURCE" refId="14" navigable="false">      
-      <attribute id="87" name="game"/>      
-      <multiplicity id="88" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="89">    
-    <end type="SOURCE" refId="19" navigable="false">      
-      <attribute id="90" name="eventGenerator"/>      
-      <multiplicity id="91" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="92">    
+  <generalization id="89">    
     <end type="SOURCE" refId="22"/>    
     <end type="TARGET" refId="23"/>  
   </generalization>  
+  <association id="90">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="91" name="entity">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="92" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

@@ -7,7 +7,7 @@ public class Menu extends Event {
 	public Menu(Game game) {
 		super(game, "Menu", "Dungeon Crawler");
 		
-		super.addChoice(new Choice(1, "Start Game") {
+		super.addChoice(new Choice('1', "Start Dungeon") {
 			@Override
 			public void activate() {
 				Story mainStory = new Story(game, 4);
@@ -15,7 +15,7 @@ public class Menu extends Event {
 			}
 		});
 		
-		super.addChoice(new Choice(2, "Quit") {
+		super.addChoice(new Choice('2', "Quit") {
 			@Override
 			public void activate() {
 				System.out.println("Quitting game...");

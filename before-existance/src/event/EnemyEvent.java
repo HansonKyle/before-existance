@@ -10,28 +10,28 @@ public class EnemyEvent extends Event {
 		super(game, "Enemy Appeared", "A wild " + enemy.getName() + " has appeared!");
 		this.enemy = enemy;
 		
-		super.addChoice(new Choice(1, "Attack") {
+		super.addChoice(new Choice('1', "Attack") {
 			@Override
 			public void activate() {
 				System.out.println("*attack*");
 			}
 		});
 		
-		super.addChoice(new Choice(2, "View Inventory") {
+		super.addChoice(new Choice('2', "View Inventory") {
 			@Override
 			public void activate() {
 				System.out.println("*Print items in inventory*");
 			}
 		});
 		
-		super.addChoice(new Choice(3, "Inspect Enemy") {
+		super.addChoice(new Choice('3', "Inspect Enemy") {
 			@Override
 			public void activate() {
 				System.out.println(enemy);
 			}
 		});
 		
-		super.addChoice(new Choice(4, "Retreat") {
+		super.addChoice(new Choice('4', "Retreat") {
 			@Override
 			public void activate() {
 				System.out.println("*end battle*");

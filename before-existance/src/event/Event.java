@@ -39,8 +39,8 @@ public class Event {
 		return null;
 	}
 	
-	public int[] getValidKeys() {
-		int[] keys = new int[choices.size()];
+	public char[] getValidKeys() {
+		char[] keys = new char[choices.size()];
 		for (int i = 0; i < choices.size(); i++) {
 			keys[i] = choices.get(i).getKeyBinding();
 		}
@@ -60,7 +60,7 @@ public class Event {
 		if (choices.size() > 0) {
 			System.out.println("----------------------------------");
 			System.out.println("Enter your choice: ");
-			int key = game.getInput().requestInt(getValidKeys(), "Invalid input. Please enter a number associated with one of the choices above:");
+			int key = game.getInput().requestChar(getValidKeys(), "Invalid input. Please enter a number associated with one of the choices above:");
 			Choice chosen = getChoice(key);
 			chosen.activate();
 		}

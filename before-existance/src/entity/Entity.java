@@ -1,7 +1,7 @@
 package entity;
 import item.Weapon;
 
-public class Entity {
+public abstract class Entity {
 	
 	private String name;
 	private int health;
@@ -21,6 +21,8 @@ public class Entity {
 		this.currentWeapon = currentWeapon;
 	}
 	
+	public abstract void die();
+	
 	@Override
 	public String toString() {
 		return name.toUpperCase() + " | " + healthBar.toString();
@@ -32,6 +34,10 @@ public class Entity {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public boolean isAlive() {
+		return health > 0;
 	}
 	
 	public void replenishHealth() {
@@ -52,6 +58,7 @@ public class Entity {
 			health -= amount;
 			if (health < 0) {
 				health = 0;
+				die();
 			}
 		}
 	}
@@ -63,6 +70,9 @@ public class Entity {
 	public void setHealth(int health) {
 		if (health >= 0) {
 			this.health = health;
+			if (health == 0) {
+				die();
+			}
 		}
 	}
 

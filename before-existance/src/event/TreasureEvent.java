@@ -7,7 +7,7 @@ public class TreasureEvent extends Event {
 	public TreasureEvent(Game game) {
 		super(game, "Treasure Chest", "A treasure chest lays in the center of the room.");
 		
-		super.addChoice(new Choice(1, "Open treasure chest") {
+		super.addChoice(new Choice('1', "Open treasure chest") {
 			public void activate() {
 				double randomChance = Math.random();
 				
@@ -24,7 +24,7 @@ public class TreasureEvent extends Event {
 			}
 		});
 		
-		super.addChoice(new Choice(2, "Leave the chest for the next adventurer") {
+		super.addChoice(new Choice('2', "Leave the chest for the next adventurer") {
 			public void activate() {
 				double randomChance = Math.random();
 				

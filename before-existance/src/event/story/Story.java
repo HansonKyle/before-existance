@@ -1,7 +1,6 @@
 package event.story;
 
 import core.Game;
-import entity.Player;
 import event.Event;
 import event.EventGenerator;
 
@@ -10,7 +9,6 @@ public class Story {
 	private final EventGenerator eventGenerator;
 	
 	private Game game;
-	private Player player;
 	private Event[] events;
 
 	public Story(Game game, int numEvents) {
@@ -28,25 +26,30 @@ public class Story {
 			game.initPlayer();
 		}
 		
-		for (Event event : events) {
-			System.out.println(event.getDescription());
-			event.displayChoices();
-			event.requestChoice();
+		int i = 0;
+		while (i < events.length && game.getPlayer().isAlive()) {
+			System.out.println(events[i].getDescription());
+			events[i].displayChoices();
+			events[i].requestChoice();
 			System.out.println();
+			i++;
 		}
-		System.out.println("----------------------------------");
-		System.out.println("You have finished the game. Congratulations!");
-		System.out.println("----------------------------------\n");
-		
+		if (game.getPlayer().isAlive()) {
+			System.out.println("----------------------------------");
+			System.out.println("You have completed this dungeon. Congratulations!");
+			System.out.println("Current Stats: " + game.getPlayer());
+			System.out.println("----------------------------------\n");
+		} else {
+			System.out.println("----------------------------------");
+			System.out.println("Game over.");
+			System.out.println("----------------------------------\n");
+			game.setPlayer(null);
+		}
 		game.displayMenu();
 	}
 
 	@Override
 	public String toString() {
 		return "Number of events: " + events.length;
-	}
-	
-	public Player getPlayer() {
-		return player;
 	}
 }

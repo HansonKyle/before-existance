@@ -1,10 +1,10 @@
 package event;
 public abstract class Choice {
 	
-	private int keyBinding;
+	private char keyBinding;
 	private String description;
 
-	public Choice(int keyBinding, String description) {
+	public Choice(char keyBinding, String description) {
 		this.keyBinding = keyBinding;
 		this.description = description;
 	}
@@ -21,11 +21,11 @@ public abstract class Choice {
 		return keyBinding + ". " + description;
 	}
 	
-	public int getKeyBinding() {
+	public char getKeyBinding() {
 		return keyBinding;
 	}
 
-	public void setKeyBinding(int keyBinding) {
+	public void setKeyBinding(char keyBinding) {
 		this.keyBinding = keyBinding;
 	}
 

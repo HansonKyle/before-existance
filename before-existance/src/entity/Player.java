@@ -18,7 +18,12 @@ public class Player extends Entity {
 		super(name, healthCap);
 	}
 	
-	public void addItem(Item i){
+	@Override
+	public void die() {
+		
+	}
+	
+	public void addItem(Item i) {
 		inventory.add(i);
 	}
 	

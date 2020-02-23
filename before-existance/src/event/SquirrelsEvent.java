@@ -21,6 +21,7 @@ public class SquirrelsEvent extends Event {
 				}
 			}
 		});
+		
 		super.addChoice(new Choice(2, "Sneak to the far door") {
 			public void activate() {
 				double randomChance = Math.random();

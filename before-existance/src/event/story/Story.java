@@ -30,12 +30,14 @@ public class Story {
 		String playerName = game.getInput().getScanner().next();
 		this.player = new Player(playerName, 100, null);
 		
+		System.out.println();
 		for (Event event : events) {
 			System.out.println(event.getDescription());
 			event.displayChoices();
 			event.requestChoice();
-			System.out.println("----------------------------------");
+			System.out.println();
 		}
+		System.out.println("----------------------------------");
 		System.out.println("You have finished the game. Congratulations!");
 	}
 

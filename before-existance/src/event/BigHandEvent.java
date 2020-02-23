@@ -18,12 +18,14 @@ public class BigHandEvent extends Event {
 				}
 			}
 		});
+		
 		super.addChoice(new Choice(2, "Flip the hand off") {
 			public void activate() {
 				System.out.println("The hand slaps you through a brick wall, into another room (-40 Health). The hand then repairs the wall as an attempt to not see you again.");
 				//you.removeHealth(40);
 			}
 		});
+		
 		super.addChoice(new Choice(3, "Attack the hand") {
 			public void activate() {
 				double randomChance = Math.random();

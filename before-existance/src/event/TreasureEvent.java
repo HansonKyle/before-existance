@@ -23,6 +23,7 @@ public class TreasureEvent extends Event {
 				}
 			}
 		});
+		
 		super.addChoice(new Choice(2, "Leave the chest for the next adventurer") {
 			public void activate() {
 				double randomChance = Math.random();

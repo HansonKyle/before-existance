@@ -19,6 +19,7 @@ public class FrailSkeletonEvent extends Event {
 				}
 			}
 		});
+		
 		super.addChoice(new Choice(2, "Run to the door") {
 			public void activate() {
 				double randomChance = Math.random();

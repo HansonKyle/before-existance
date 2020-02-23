@@ -21,6 +21,11 @@ public class Entity {
 		this.currentWeapon = currentWeapon;
 	}
 	
+	@Override
+	public String toString() {
+		return name.toUpperCase() + " | " + healthBar.toString();
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -29,13 +34,26 @@ public class Entity {
 		this.name = name;
 	}
 	
-	@Override
-	public String toString() {
-		return name.toUpperCase() + " | " + healthBar.toString();
-	}
-	
 	public void replenishHealth() {
 		this.health = healthCap;
+	}
+	
+	public void addHealth(int amount) {
+		if (amount > 0) {
+			health += amount;
+			if (health > healthCap) {
+				replenishHealth();
+			}
+		}
+	}
+	
+	public void removeHealth(int amount) {
+		if (amount > 0) {
+			health -= amount;
+			if (health < 0) {
+				health = 0;
+			}
+		}
 	}
 	
 	public int getHealth() {
@@ -45,18 +63,6 @@ public class Entity {
 	public void setHealth(int health) {
 		if (health >= 0) {
 			this.health = health;
-		}
-	}
-	
-	public void addHealth(int amount) {
-		if (health > 0) {
-			health += amount;
-		}
-	}
-	
-	public void removeHealth(int amount) {
-		if (health < 0) {
-			health -= amount;
 		}
 	}
 

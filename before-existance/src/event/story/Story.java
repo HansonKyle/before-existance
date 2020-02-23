@@ -22,9 +22,7 @@ public class Story {
 	}
 
 	public void start() {
-		if (game.getPlayer() == null) {
-			game.initPlayer();
-		}
+		game.initPlayer();
 		
 		int i = 0;
 		while (i < events.length && game.getPlayer().isAlive()) {
@@ -44,8 +42,8 @@ public class Story {
 			System.out.println("----------------------------------");
 			System.out.println("Game over.");
 			System.out.println("----------------------------------\n");
-			game.setPlayer(null);
 		}
+		game.setPlayer(null);
 		game.displayMenu();
 	}
 

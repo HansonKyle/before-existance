@@ -14,7 +14,8 @@ public class TreasureEvent extends Event {
 				if (randomChance <= 0.15) {
 					System.out.println("The treasure chest creaks open, briefly exposing the gold inside before teeth emerge from the chest and chomp down on your arm (-30 Health). The chest keeps its lid closed and refuses to open.");
 					System.out.println("Having been defeated by a wooden chest, you leave the room through a door on the other side.");
-					//game.getCurrentStory().getPlayer().removeHealth(30);
+					game.getPlayer().removeHealth(30);
+					System.out.println("Current Stats: " + game.getPlayer());
 				} else if (randomChance <= 80) {
 					System.out.println("You open the chest to reveal an empty bottle with a label that says 'Your luck'.");
 				} else {

@@ -35,6 +35,7 @@ public class Story {
 			i++;
 		}
 		if (game.getPlayer().isAlive()) {
+			game.getPlayer().dungeonSurvived();
 			System.out.println("----------------------------------");
 			System.out.println("You have completed this dungeon. Congratulations!");
 			System.out.println("Current Stats: " + game.getPlayer());

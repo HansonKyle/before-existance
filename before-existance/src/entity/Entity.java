@@ -25,7 +25,7 @@ public abstract class Entity {
 	
 	@Override
 	public String toString() {
-		return name.toUpperCase() + " | " + healthBar.toString();
+		return "| Name: " + name.toUpperCase() + " | " + healthBar.toString() + " |";
 	}
 	
 	public String getName() {

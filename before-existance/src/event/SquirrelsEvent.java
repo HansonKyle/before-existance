@@ -13,7 +13,6 @@ public class SquirrelsEvent extends Event {
 				
 				if (randomChance <= 0.50) {
 					System.out.println("You successfully sneak to the door and escape the possibility of eternal torment by squirrels");
-					//you.removeHealth(10);
 				} else if (randomChance <= 85) {
 					System.out.println("You start to sneak towards the door but you step on a stray nut. The army is awake, but they are happy because nut. You manage to get to the close door into the next room.");
 				} else {

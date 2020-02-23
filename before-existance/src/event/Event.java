@@ -60,7 +60,7 @@ public class Event {
 		if (choices.size() > 0) {
 			System.out.println("----------------------------------");
 			System.out.println("Enter your choice: ");
-			int key = game.getInput().requestInt(getValidKeys());
+			int key = game.getInput().requestInt(getValidKeys(), "Invalid input. Please enter a number associated with one of the choices above:");
 			Choice chosen = getChoice(key);
 			chosen.activate();
 		}

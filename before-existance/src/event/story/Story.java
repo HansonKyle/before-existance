@@ -24,13 +24,10 @@ public class Story {
 	}
 
 	public void start() {
-		System.out.println("----------------------------------");
-		System.out.println("Please enter your name: ");
+		if (game.getPlayer() == null) {
+			game.initPlayer();
+		}
 		
-		String playerName = game.getInput().getScanner().next();
-		this.player = new Player(playerName, 100, null);
-		
-		System.out.println();
 		for (Event event : events) {
 			System.out.println(event.getDescription());
 			event.displayChoices();
@@ -39,6 +36,9 @@ public class Story {
 		}
 		System.out.println("----------------------------------");
 		System.out.println("You have finished the game. Congratulations!");
+		System.out.println("----------------------------------\n");
+		
+		game.displayMenu();
 	}
 
 	@Override

@@ -5,7 +5,7 @@ import core.Game;
 public class EmptyRoomEvent extends Event {
 
 	public EmptyRoomEvent(Game game) {
-		super(game, "Empty Room", "The room is empty.");
+		super(game, "Empty Room", "This room is empty.");
 		
 		super.addChoice(new Choice(1, "Go through door") {
 			public void activate() {

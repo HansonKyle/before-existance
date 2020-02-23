@@ -1,16 +1,30 @@
 package core;
 
+import entity.Player;
 import event.Menu;
-import event.story.Story;
 
 public class Game {
 	
 	private final Input input = new Input();
 	private final Menu menu;
-	private Story currentStory;
-	
+	private Player player;
+
 	public Game() {
 		menu = new Menu(this);
+		displayMenu();
+	}
+	
+	public void initPlayer() {
+		System.out.println("----------------------------------");
+		System.out.println("Please enter your name: ");
+		
+		String playerName = input.getScanner().next();
+		this.player = new Player(playerName, 100, null);
+		
+		System.out.println();
+	}
+	
+	public void displayMenu() {
 		System.out.println(menu);
 		menu.displayChoices();
 		menu.requestChoice();
@@ -24,11 +38,7 @@ public class Game {
 		return input;
 	}
 	
-	public Story getCurrentStory() {
-		return currentStory;
-	}
-	
-	public void setCurrentStory(Story currentStory) {
-		this.currentStory = currentStory;
+	public Player getPlayer() {
+		return player;
 	}
 }

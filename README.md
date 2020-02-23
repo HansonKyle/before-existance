@@ -13,4 +13,4 @@ The master branch contains the most recent version of the code.
 
 1. Download the master branch
 2. Import the code into an IDE as a new Java project
-3. Run core/Main.java
+3. Run core/Main.java after checkout

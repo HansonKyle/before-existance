@@ -27,6 +27,13 @@ public class Attack {
 	}
 	
 	public void attack(Entity attacker, Entity target) {
-		target.removeHealth(attacker.getCurrentWeapon().getDamage());
+		if (TurnBased.firstTurn() == true) {
+			target.removeHealth(attacker.getCurrentWeapon().getDamage());
+			attacker.removeHealth(target.getCurrentWeapon().getDamage());
+		}
+		else {
+			attacker.removeHealth(target.getCurrentWeapon().getDamage());
+			target.removeHealth(attacker.getCurrentWeapon().getDamage());
+		}
 	}
 }

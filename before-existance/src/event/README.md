@@ -9,5 +9,7 @@
 |EventGenerator|Anil, Kyle|
 |FrailSkeletonEvent|Kyle|
 |Menu||
+|Room|Kyle|
+|Story||
 |SquirrelsEvent|Kyle|
 |TreasureEvent|Kyle|

@@ -2,7 +2,7 @@ package event;
 import java.util.ArrayList;
 
 import core.Game;
-
+// Event class creates events that allow the player to read the event and respond via choices made for the given event
 public class Event {
 	
 	private final ArrayList<Choice> choices = new ArrayList<>();
@@ -10,13 +10,13 @@ public class Event {
 	private String name;
 	private String description;
 
-	public Event(Game game, String name, String description) {
+	public Event(Game game, String name, String description) { // General constructor
 		this.game = game;
 		this.name = name;
 		this.description = description;
 	}
 	
-	public void addChoice(Choice choice) {
+	public void addChoice(Choice choice) { // Adds choice to the choices arrayList for this event
 		choices.add(new Choice(choice) {
 			@Override
 			public void activate() {
@@ -25,7 +25,7 @@ public class Event {
 		});
 	}
 	
-	public Choice getChoice(int key) {
+	public Choice getChoice(int key) { // activates choice if the key corresponds to one of the choices in arrayList
 		for (Choice choice : choices) {
 			if (key == choice.getKeyBinding()) {
 				return new Choice(choice) {
@@ -39,7 +39,7 @@ public class Event {
 		return null;
 	}
 	
-	public char[] getValidKeys() {
+	public char[] getValidKeys() { // returns arrayList of key bindings for each choice in choices
 		char[] keys = new char[choices.size()];
 		for (int i = 0; i < choices.size(); i++) {
 			keys[i] = choices.get(i).getKeyBinding();
@@ -47,7 +47,7 @@ public class Event {
 		return keys;
 	}
 	
-	public void displayChoices() {
+	public void displayChoices() { // prints every choice in choices
 		if (choices.size() > 0) {
 			System.out.println("----------------------------------");
 			for (Choice choice : choices) {
@@ -56,7 +56,7 @@ public class Event {
 		}
 	}
 	
-	public void requestChoice() {
+	public void requestChoice() { // activates choice if key entered matches a valid key
 		if (choices.size() > 0) {
 			System.out.println("----------------------------------");
 			System.out.println("Enter your choice: ");

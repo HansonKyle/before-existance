@@ -1,5 +1,5 @@
 # Core
-| Class | Contributer |
+| Class | Contributor |
 |-------|-------------|
 |Game|Anil, Kyle|
 |Input|Anil|

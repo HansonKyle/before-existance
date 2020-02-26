@@ -1,9 +1,9 @@
 # Entity
 | Class | Contributer |
 |-------|-------------|
-|Attack||
-|Enemy||
-|Entity||
-|HealthBar||
-|Player||
-|TurnBased||
+|Attack|Alex, Harprabh|
+|Enemy|Alex|
+|Entity|Alex, Anil|
+|HealthBar|Anil|
+|Player|Alex|
+|TurnBased|Harprabh|

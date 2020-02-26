@@ -1,6 +1,7 @@
 package event;
 
 import core.Game;
+
 // Event: Empty room
 // Creates an event with 1 choice
 public class EmptyRoomEvent extends Event {

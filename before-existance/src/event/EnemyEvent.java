@@ -1,7 +1,10 @@
 package event;
+
 import core.Game;
 import entity.Enemy;
 
+// Event: Enemy Event
+// Creates an event for battling an enemy
 public class EnemyEvent extends Event {
 	
 	private Enemy enemy;

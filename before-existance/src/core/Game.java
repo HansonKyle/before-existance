@@ -3,6 +3,7 @@ package core;
 import entity.Player;
 import event.Menu;
 
+// Initializes the menu and player classes
 public class Game {
 	
 	private final Input input = new Input();
@@ -14,6 +15,7 @@ public class Game {
 		displayMenu();
 	}
 	
+	// Initializes the player by retrieving user input
 	public void initPlayer() {
 		System.out.println("----------------------------------");
 		System.out.println("Please enter your name: ");
@@ -24,6 +26,7 @@ public class Game {
 		System.out.println();
 	}
 	
+	// Prints the menu to the screen and waits for user input
 	public void displayMenu() {
 		System.out.println("| DUNGEON CRAWLER |");
 		System.out.println(menu);

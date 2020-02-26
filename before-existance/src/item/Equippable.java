@@ -1,4 +1,5 @@
 package item;
+
 public class Equippable extends Item {
 	
 	public Equippable(String name) {
@@ -19,11 +20,11 @@ public class Equippable extends Item {
 		return equipState;
 	}
 	
+	//	TODO: Bring up a menu of options whether the player
+	//	would like to equip the item if it is not equipped and
+	//	unequip the item if it is equipped
 	@Override
 	public void use() {
-		//	Bring up a menu of options whether the player
-		//	would like to equip the item if it is not equipped and
-		//	unequip the item if it is equipped
 		equipState = true;
 	}
 }

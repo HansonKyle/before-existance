@@ -1,6 +1,7 @@
 package event;
 
 import core.Game;
+
 // Event: Big hand
 // Creates an event with 3 choices
 public class BigHandEvent extends Event {

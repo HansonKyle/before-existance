@@ -1,4 +1,6 @@
 package entity;
+
+// Sets up a battle scenario between two entities
 public class Attack {
 	
 	// Two entities one being the target of the attack and one being the attacker or source of damage
@@ -27,11 +29,10 @@ public class Attack {
 	}
 	
 	public void attack(Entity attacker, Entity target) {
-		if (TurnBased.firstTurn() == true) {
+		if (TurnBased.firstTurn()) {
 			target.removeHealth(attacker.getCurrentWeapon().getDamage());
 			attacker.removeHealth(target.getCurrentWeapon().getDamage());
-		}
-		else {
+		} else {
 			attacker.removeHealth(target.getCurrentWeapon().getDamage());
 			target.removeHealth(attacker.getCurrentWeapon().getDamage());
 		}

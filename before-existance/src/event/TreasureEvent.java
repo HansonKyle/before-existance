@@ -1,6 +1,7 @@
 package event;
 
 import core.Game;
+
 // Event: Treasure chest
 // Adds event with 2 choices
 public class TreasureEvent extends Event {

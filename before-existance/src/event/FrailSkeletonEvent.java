@@ -1,6 +1,7 @@
 package event;
 
 import core.Game;
+
 // Event: Frail Skeleton
 // Creates an event with 2 choices
 public class FrailSkeletonEvent extends Event {

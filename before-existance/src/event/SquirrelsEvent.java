@@ -1,6 +1,7 @@
 package event;
 
 import core.Game;
+
 // Event: Squirrels
 // Creates an event with 2 choices
 public class SquirrelsEvent extends Event {

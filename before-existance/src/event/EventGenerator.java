@@ -2,8 +2,8 @@ package event;
 
 import java.util.ArrayList;
 import java.util.Random;
-
 import core.Game;
+
 // EventGenerator class creates an arrayList of randomly chosen events
 public class EventGenerator {
 	

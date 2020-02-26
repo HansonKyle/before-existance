@@ -1,6 +1,7 @@
 package event;
 import core.Game;
 import event.story.Story;
+
 // Menu class creates choices for the main menu
 public class Menu extends Event {
 	

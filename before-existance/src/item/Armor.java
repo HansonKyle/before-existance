@@ -1,4 +1,5 @@
 package item;
+
 public class Armor extends Equippable {
 	
 	private int healthIncrease;

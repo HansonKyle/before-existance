@@ -1,16 +1,19 @@
 package event.story;
+
 // Room class generates room sizes for events
 public class Room {
 	
 	private int roomLength;
 	private int roomWidth;
 
-	public Room(int l, int w) { // General constructor
+	// General constructor
+	public Room(int l, int w) {
 		roomLength = l;
 		roomWidth = w;
 	}
 
-	public Room() { // Random constructor
+	// Random constructor
+	public Room() {
 		int roomAdjustmentConstant = 20; // Arbitrary until room size needs to be converted into pixels
 		double randomNumberLength = Math.random();
 		double randomNumberWidth = Math.random();

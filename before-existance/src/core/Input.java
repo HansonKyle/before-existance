@@ -1,11 +1,22 @@
 package core;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+// Contains methods for retrieving user input with validation and error handling
 public class Input {
 	
 	private final Scanner scanner = new Scanner(System.in);
 	
+	/**
+	 * Continually ask the user to input an integer until valid input is given.
+	 * 
+	 * @param message printed before asking the user for input
+	 * @param validInputs contains all acceptable forms of input
+	 * @param errorMesssage printed after the user gives invalid input
+	 * 
+	 * @return input
+	 */
 	public int requestInt(String message, int[] validInputs, String errorMessage) {
 	    int input = 0;
 	    boolean valid = false;
@@ -30,10 +41,27 @@ public class Input {
 	    return input;
 	}
 	
+	/**
+	 * Continually ask the user to input an integer until valid input is given.
+	 * 
+	 * @param validInputs contains all acceptable forms of input
+	 * @param errorMesssage printed after the user gives invalid input
+	 * 
+	 * @return input
+	 */
 	public int requestInt(int[] validInputs, String errorMessage) {
 		return requestInt(null, validInputs, errorMessage);
 	}
 	
+	/**
+	 * Continually ask the user to input a char until valid input is given.
+	 * 
+	 * @param message printed before asking the user for input
+	 * @param validInputs contains all acceptable forms of input
+	 * @param errorMesssage printed after the user gives invalid input
+	 * 
+	 * @return input
+	 */
 	public char requestChar(String message, char[] validInputs, String errorMessage) {
 	    String input = "";
 	    boolean valid = false;
@@ -60,6 +88,14 @@ public class Input {
 	    return input.charAt(0);
 	}
 	
+	/**
+	 * Continually ask the user to input a char until valid input is given.
+	 * 
+	 * @param validInputs contains all acceptable forms of input
+	 * @param errorMesssage printed after the user gives invalid input
+	 * 
+	 * @return input
+	 */
 	public char requestChar(char[] validInputs, String errorMessage) {
 		return requestChar(null, validInputs, errorMessage);
 	}

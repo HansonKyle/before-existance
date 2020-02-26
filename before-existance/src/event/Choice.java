@@ -1,4 +1,5 @@
 package event;
+
 // Choice class stores options for the player to execute in the form of a key binding with a description
 public abstract class Choice {
 	

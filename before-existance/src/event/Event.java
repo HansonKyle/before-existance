@@ -1,8 +1,9 @@
 package event;
-import java.util.ArrayList;
 
+import java.util.ArrayList;
 import core.Game;
-// Event class creates events that allow the player to read the event and respond via choices made for the given event
+
+// Event class creates events that allow the player to read and respond via choices made for the given event
 public class Event {
 	
 	private final ArrayList<Choice> choices = new ArrayList<>();
@@ -10,13 +11,15 @@ public class Event {
 	private String name;
 	private String description;
 
-	public Event(Game game, String name, String description) { // General constructor
+	// General constructor
+	public Event(Game game, String name, String description) {
 		this.game = game;
 		this.name = name;
 		this.description = description;
 	}
 	
-	public void addChoice(Choice choice) { // Adds choice to the choices arrayList for this event
+	// Adds a choice to the choices arrayList for this event
+	public void addChoice(Choice choice) {
 		choices.add(new Choice(choice) {
 			@Override
 			public void activate() {
@@ -25,7 +28,13 @@ public class Event {
 		});
 	}
 	
-	public Choice getChoice(int key) { // activates choice if the key corresponds to one of the choices in arrayList
+	/**
+	 * Retrieves, copies and returns a choice in choices
+	 * 
+	 * @param key a valid key that corresponds to a choice in the event
+	 * @return choice
+	 */
+	public Choice getChoice(char key) {
 		for (Choice choice : choices) {
 			if (key == choice.getKeyBinding()) {
 				return new Choice(choice) {
@@ -39,7 +48,11 @@ public class Event {
 		return null;
 	}
 	
-	public char[] getValidKeys() { // returns arrayList of key bindings for each choice in choices
+	/**
+	 * @param none
+	 * @return keys array of key bindings for each choice in choices
+	 */
+	public char[] getValidKeys() {
 		char[] keys = new char[choices.size()];
 		for (int i = 0; i < choices.size(); i++) {
 			keys[i] = choices.get(i).getKeyBinding();
@@ -47,7 +60,8 @@ public class Event {
 		return keys;
 	}
 	
-	public void displayChoices() { // prints every choice in choices
+	// Prints every choice in choices
+	public void displayChoices() {
 		if (choices.size() > 0) {
 			System.out.println("----------------------------------");
 			for (Choice choice : choices) {
@@ -56,11 +70,12 @@ public class Event {
 		}
 	}
 	
-	public void requestChoice() { // activates choice if key entered matches a valid key
+	// Activates the choice that corresponds to the key that was entered
+	public void requestChoice() {
 		if (choices.size() > 0) {
 			System.out.println("----------------------------------");
 			System.out.println("Enter your choice: ");
-			int key = game.getInput().requestChar(getValidKeys(), "Invalid input. Please enter a number associated with one of the choices above:");
+			char key = game.getInput().requestChar(getValidKeys(), "Invalid input. Please enter a number associated with one of the choices above:");
 			Choice chosen = getChoice(key);
 			chosen.activate();
 		}

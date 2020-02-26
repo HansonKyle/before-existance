@@ -1,9 +1,9 @@
 # Item
-| Class | Contributer |
+| Class | Contributor |
 |-------|-------------|
-|Armor||
-|Consumable||
-|Equippable||
-|Item||
-|Spell||
-|Weapon||
+|Armor|Alex|
+|Consumable|Alex|
+|Equippable|Alex|
+|Item|Alex|
+|Spell|Alex|
+|Weapon|Alex|

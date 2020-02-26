@@ -5,5 +5,5 @@
 |Enemy|Alex|
 |Entity|Alex, Anil|
 |HealthBar|Anil|
-|Player|Alex|
+|Player|Alex, Anil|
 |TurnBased|Harprabh|

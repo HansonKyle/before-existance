@@ -28,6 +28,7 @@ public class Attack {
 		this.attacker = attacker;
 	}
 	
+	// One of the entities does damage to the other depending on whose turn it is
 	public void attack(Entity attacker, Entity target) {
 		if (TurnBased.firstTurn()) {
 			target.removeHealth(attacker.getCurrentWeapon().getDamage());

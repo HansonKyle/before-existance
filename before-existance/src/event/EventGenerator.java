@@ -12,11 +12,13 @@ public class EventGenerator {
 	
 	private Game game;
 	
-	public EventGenerator(Game game) { // General constructor
+	// General constructor
+	public EventGenerator(Game game) {
 		this.game = game;
 	}
 	
-	public Event generateUniqueEvent() { // generates an event based on a random number (no repeated events)
+	// Generates an event based on a random number (no repeated events)
+	public Event generateUniqueEvent() {
 		Event event = null;
 		while (event == null) {
 			int num = random.nextInt(5);

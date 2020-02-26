@@ -6,17 +6,20 @@ public abstract class Choice {
 	private char keyBinding;
 	private String description;
 
-	public Choice(char keyBinding, String description) { // General constructor
+	// General constructor
+	public Choice(char keyBinding, String description) {
 		this.keyBinding = keyBinding;
 		this.description = description;
 	}
 	
-	public Choice(Choice choice) { // Copy constructor
+	// Copy constructor
+	public Choice(Choice choice) {
 		this.keyBinding = choice.keyBinding;
 		this.description = choice.description;
 	}
 	
-	public abstract void activate(); // Abstract activate method that allows for different choices to have different activation methods
+	// Allows for different choices to have different activation methods
+	public abstract void activate();
 	
 	@Override
 	public String toString() {

@@ -1,5 +1,5 @@
 # Entity
-| Class | Contributer |
+| Class | Contributor |
 |-------|-------------|
 |Attack|Alex, Harprabh|
 |Enemy|Alex|

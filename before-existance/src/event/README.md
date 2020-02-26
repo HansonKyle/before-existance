@@ -1,15 +1,15 @@
 # Event
-| Class | Contributer |
+| Class | Contributor |
 |-------|-------------|
 |BigHandEvent|Kyle|
-|Choice||
+|Choice|Anil|
 |EmptyRoomEvent|Kyle|
-|EnemyEvent||
-|Event||
+|EnemyEvent|Anil|
+|Event|Anil|
 |EventGenerator|Anil, Kyle|
 |FrailSkeletonEvent|Kyle|
-|Menu||
+|Menu|Harprabh, Anil|
 |Room|Kyle|
-|Story||
+|Story|Kyle, Anil|
 |SquirrelsEvent|Kyle|
 |TreasureEvent|Kyle|

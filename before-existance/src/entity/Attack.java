@@ -36,4 +36,13 @@ public class Attack {
 			target.removeHealth(attacker.getCurrentWeapon().getDamage());
 		}
 	}
+	
+	public boolean accuracyCheck(double chance) {	//Checks if the attacker misses or not, chance must be <= 1.0
+		boolean success = false;
+		double num = Math.random();
+		if (num <= chance) {
+			success = true;
+		}
+		return success;
+	}
 }

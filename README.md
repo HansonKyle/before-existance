@@ -13,3 +13,10 @@ The master branch contains the most recent version of the code.
 
 1. Import the master branch into an IDE as a Java project
 3. Run core/Main.java after checkout
+
+# Presenters:
+| Iteration | Name |
+|-----------|------|
+|1|Anil|
+|2||
+|3||

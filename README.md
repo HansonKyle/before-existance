@@ -15,7 +15,7 @@ The master branch contains the most recent version of the code.
 3. Run core/Main.java after checkout
 
 # Presenters:
-| Iteration | Name |
+| Iteration | Name(s) |
 |-----------|------|
 |1|Anil|
 |2||

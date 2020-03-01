@@ -15,4 +15,8 @@ public class Weapon extends Equippable {
 	public void setDamage(int damage) {
 		this.damage = damage;
 	}
+	
+	
+
+
 }

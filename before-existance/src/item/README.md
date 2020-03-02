@@ -6,4 +6,4 @@
 |Equippable|Alex|
 |Item|Alex|
 |Spell|Alex|
-|Weapon|Alex|
+|Weapon|Alex, Kyle|

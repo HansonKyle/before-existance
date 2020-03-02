@@ -15,7 +15,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 public class MainMenuController {
@@ -110,16 +109,11 @@ public class MainMenuController {
 		roomCountLabel.setText(" " + String.valueOf(player.getDungeonsSurvived()));
 	}
 
-	void displayChoices(int i) {
-
-	}
-
 	void displayNextEvent(ActionEvent event) throws IOException {
 		if (player.isAlive()) {
 			if (eventIndex < story.length()) {
 				System.out.println(story.getEvent(eventIndex).getDescription());
 				eventDescriptionLabel.setText(story.getEvent(eventIndex).getDescription());
-				displayChoices(eventIndex);
 				if (story.getEvent(eventIndex).getChoice('1').getDescription() != null) {
 					choiceOneButton.setVisible(true);
 					choiceOneLabel.setVisible(true);

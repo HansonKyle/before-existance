@@ -2,10 +2,10 @@
 | Class | Contributor |
 |-------|-------------|
 |BigHandEvent|Kyle|
-|Choice|Anil|
+|Choice|Anil, Kyle|
 |EmptyRoomEvent|Kyle|
 |EnemyEvent|Anil|
-|Event|Anil|
+|Event|Anil, Kyle|
 |EventGenerator|Anil, Kyle|
 |FrailSkeletonEvent|Kyle|
 |Menu|Harprabh, Anil|

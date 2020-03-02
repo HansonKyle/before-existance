@@ -16,4 +16,9 @@ public class Weapon extends Equippable {
 	public void setDamage(int damage) {
 		this.damage = damage;
 	}
+	
+	public String toString() {
+		String str = this.getName() + " : " + String.valueOf(damage);
+		return str;
+	}
 }

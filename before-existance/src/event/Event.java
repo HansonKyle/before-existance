@@ -10,6 +10,24 @@ public class Event {
 	private Game game;
 	private String name;
 	private String description;
+	private int healthLost;
+	private String choiceResult;
+	
+	public int getHealthLost() {
+		return healthLost;
+	}
+
+	public void setHealthLost(int healthLost) {
+		this.healthLost = healthLost;
+	}
+
+	public String getChoiceResult() {
+		return choiceResult;
+	}
+
+	public void setChoiceResult(String choiceResult) {
+		this.choiceResult = choiceResult;
+	}
 
 	// General constructor
 	public Event(Game game, String name, String description) {
@@ -47,7 +65,7 @@ public class Event {
 		}
 		return null;
 	}
-	
+			
 	/**
 	 * @param none
 	 * @return keys array of key bindings for each choice in choices
@@ -84,6 +102,10 @@ public class Event {
 	@Override
 	public String toString() {
 		return name;
+	}
+	
+	public int getChoicesLength() {
+		return choices.size() - 1;
 	}
 	
 	public String getName() {

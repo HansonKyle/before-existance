@@ -2,48 +2,45 @@ package event;
 
 import core.Game;
 
-// Event: Treasure chest
-// Adds event with 2 choices
-public class TreasureEvent extends Event {
+// Event: Squirrels
+// Creates an event with 2 choices
+public class SquirrelsEvent extends Event {
 
-	public TreasureEvent(Game game) {
-		super(game, "Treasure Chest", "A treasure chest lays in the center of the room.");
+
+	public SquirrelsEvent(Game game) {
+		super(game, "Squirrels", "An army of squirrels lay asleep in the middle of the room. \nIf they get angry there is no survival. \nThere are two doors, one farther than the other.");
 		
-		super.addChoice(new Choice('1', "Open treasure chest") { // Adds first choice
+		super.addChoice(new Choice('1', "Sneak to the close door") { // Adds first choice
 			public void activate() {
 				double randomChance = Math.random();
 				
-				if (randomChance <= 0.15) {
-					setChoiceResult("The treasure chest creaks open, briefly exposing the gold inside before teeth emerge from the chest and chomp down on your arm (-30 Health). \nThe chest keeps its lid closed and refuses to open. \nHaving been defeated by a wooden chest, you leave the room through a door on the other side.");
-					// 15% chance to be chomped by a chest
-					setHealthLost(30);
-				} else if (randomChance <= 80) {
-					setChoiceResult("You open the chest to reveal an empty bottle with a label that says 'Your luck'.");
-					// 65% chance to be unlucky
+				if (randomChance <= 0.50) {
+					setChoiceResult("You successfully sneak to the door and escape the possibility of eternal torment by squirrels");
+					// 50% chance to escape squirrels
+					setHealthLost(0);
+				} else if (randomChance <= 85) {
+					setChoiceResult("You start to sneak towards the door but you step on a stray nut. The army is awake, but they are happy because nut. \nYou manage to get to the close door into the next room.");
+					// 35% chance to step on a nut
 					setHealthLost(0);
 				} else {
-					setChoiceResult("You open the chest to reveal a full bottle with a label that says 'Health potion, will heal 25 health'. \nYou leave the room through a door on the other side of the room.");
-					// 20% chance to get health potion
-					setHealthLost(0);
+					setChoiceResult("You start to sneak towards the door but a small spider spooks you and you fall right on top of all of the squirrels. \nYou are then killed by an army of squirrels and the last thought running through your mind is 'Squirrel crowdsurfing'");
+					// 15% chance to die
+					setHealthLost(Integer.MAX_VALUE);
 				}
 			}
 		});
 		
-		super.addChoice(new Choice('2', "Leave the chest for the next adventurer") { // Add second choice
+		super.addChoice(new Choice('2', "Sneak to the far door") { // Adds second choice
 			public void activate() {
 				double randomChance = Math.random();
 				
 				if (randomChance <= 0.15) {
-					setChoiceResult("Just before you leave the room, you hear the chest move and growl. You made a good choice leaving the chest alone.");
-					// 15% chance to hear a mimic
-					setHealthLost(0);
-				} else if (randomChance <= 50) {
-					setChoiceResult("Just before you leave the room, another person enters through the door you came from and opens the chest. \nThey take out a wand and immediately teleport away. Weird.");
-					// 35% chance to see wizard
+					setChoiceResult("You manage to sneak your way to the far door.");
+					// 15% chance to escape
 					setHealthLost(0);
 				} else {
-					setChoiceResult("You regretfully leave the room and the chest inside it.");
-					// 50% chance for nothing
+					setChoiceResult("A lone squirrel wakes up as you pass the close door. The squirrel says one word, in perfect English. One word that will strike fear into anyone who hears a squirrel say it. \n\n'Bruh' -Lone Squirrel \n\nYou immediately open the close door behind you and leave the squirrels alone.");
+					// 85% chance for bruh
 					setHealthLost(0);
 				}
 			}

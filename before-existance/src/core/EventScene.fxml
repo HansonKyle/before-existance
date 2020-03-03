@@ -96,10 +96,16 @@
                   <Label fx:id="choiceThreeLabel" text="Choice 3 Text" visible="false" />
                </children>
             </VBox>
-            <Button fx:id="loadEventButton" layoutX="249.0" layoutY="248.0" mnemonicParsing="false" onAction="#loadEvent" text="Load Next Event" />
+            <Button fx:id="loadEventButton" layoutX="273.0" layoutY="248.0" mnemonicParsing="false" onAction="#loadEvent" text="Submit" />
             <TextField fx:id="nameTextBox" layoutX="226.0" layoutY="201.0" onAction="#nameTextBoxEdit" promptText="Enter your name" />
             <Label fx:id="nameErrorLabel" layoutX="238.0" layoutY="291.0" text="Please enter your name" visible="false" />
-            <Label fx:id="eventResultLabel" layoutX="28.0" layoutY="193.0" text="Event Result" visible="false" />
+            <Label fx:id="eventResultLabel" layoutX="28.0" layoutY="151.0" text="Event Result" visible="false" />
+            <ImageView fx:id="youDiedImage" fitHeight="150.0" fitWidth="600.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@darkSoulsYouDied.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="deadButton" layoutX="242.0" layoutY="279.0" mnemonicParsing="false" onAction="#quitToMainMenu" text="Quit to Main Menu" visible="false" />
          </children>
       </AnchorPane>
    </center>

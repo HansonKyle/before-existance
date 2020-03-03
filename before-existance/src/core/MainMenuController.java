@@ -5,6 +5,7 @@ import java.io.IOException;
 import entity.Player;
 import event.story.Story;
 import item.Weapon;
+import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,8 +15,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 public class MainMenuController {
 
@@ -81,6 +84,12 @@ public class MainMenuController {
 	private Label eventResultLabel;
 
 	@FXML
+	private ImageView youDiedImage;
+
+	@FXML
+	private Button deadButton;
+
+	@FXML
 	void startButtonClicked(ActionEvent event) throws IOException {
 		// Changes scene from MainMenu to EventScene
 		Parent eventSceneParent = FXMLLoader.load(getClass().getClassLoader().getResource("core/EventScene.fxml"));
@@ -110,48 +119,48 @@ public class MainMenuController {
 	}
 
 	void displayNextEvent(ActionEvent event) throws IOException {
-		if (player.isAlive()) {
-			if (eventIndex < story.length()) {
-				System.out.println(story.getEvent(eventIndex).getDescription());
-				eventDescriptionLabel.setText(story.getEvent(eventIndex).getDescription());
-				if (story.getEvent(eventIndex).getChoice('1').getDescription() != null) {
-					choiceOneButton.setVisible(true);
-					choiceOneLabel.setVisible(true);
-					choiceOneLabel.setText(story.getEvent(eventIndex).getChoice('1').getDescription());
-				} else {
-					choiceOneLabel.setVisible(false);
-					choiceOneButton.setVisible(false);
-				}
-				if (story.getEvent(eventIndex).getChoice('2').getDescription() != null) {
-					choiceTwoButton.setVisible(true);
-					choiceTwoLabel.setVisible(true);
-					choiceTwoLabel.setText(story.getEvent(eventIndex).getChoice('2').getDescription());
-				} else {
-					choiceTwoLabel.setVisible(false);
-					choiceTwoButton.setVisible(false);
-				}
-				if (story.getEvent(eventIndex).getChoice('3').getDescription() != null) {
-					choiceThreeButton.setVisible(true);
-					choiceThreeLabel.setVisible(true);
-					choiceThreeLabel.setText(story.getEvent(eventIndex).getChoice('3').getDescription());
-				} else {
-					choiceThreeLabel.setVisible(false);
-					choiceThreeButton.setVisible(false);
-				}
+		if (eventIndex < story.length()) {
+			System.out.println(story.getEvent(eventIndex).getDescription());
+			eventDescriptionLabel.setText(story.getEvent(eventIndex).getDescription());
+			if (story.getEvent(eventIndex).getChoice('1').getDescription() != null) {
+				choiceOneButton.setVisible(true);
+				choiceOneLabel.setVisible(true);
+				choiceOneLabel.setText(story.getEvent(eventIndex).getChoice('1').getDescription());
 			} else {
-				// to-be transition to the boss Room
-				story = new Story(game, 5);
-				eventIndex = 0;
-				displayNextEvent(event);
+				choiceOneLabel.setVisible(false);
+				choiceOneButton.setVisible(false);
+			}
+			if (story.getEvent(eventIndex).getChoice('2').getDescription() != null) {
+				choiceTwoButton.setVisible(true);
+				choiceTwoLabel.setVisible(true);
+				choiceTwoLabel.setText(story.getEvent(eventIndex).getChoice('2').getDescription());
+			} else {
+				choiceTwoLabel.setVisible(false);
+				choiceTwoButton.setVisible(false);
+			}
+			if (story.getEvent(eventIndex).getChoice('3').getDescription() != null) {
+				choiceThreeButton.setVisible(true);
+				choiceThreeLabel.setVisible(true);
+				choiceThreeLabel.setText(story.getEvent(eventIndex).getChoice('3').getDescription());
+			} else {
+				choiceThreeLabel.setVisible(false);
+				choiceThreeButton.setVisible(false);
 			}
 		} else {
-			//insert "you died" screen
-			Parent eventSceneParent = FXMLLoader.load(getClass().getClassLoader().getResource("core/MainMenu.fxml"));
-			Scene eventScene = new Scene(eventSceneParent);
-			Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-			window.setScene(eventScene);
-			window.show();
+			// to-be transition to the boss Room
+			story = new Story(game, 5);
+			eventIndex = 0;
+			displayNextEvent(event);
 		}
+	}
+
+	@FXML
+	void quitToMainMenu(ActionEvent event) throws IOException {
+		Parent eventSceneParent = FXMLLoader.load(getClass().getClassLoader().getResource("core/MainMenu.fxml"));
+		Scene eventScene = new Scene(eventSceneParent);
+		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+		window.setScene(eventScene);
+		window.show();
 	}
 
 	@FXML
@@ -162,6 +171,7 @@ public class MainMenuController {
 			if (nameErrorLabel.isVisible() == true) {
 				nameErrorLabel.setVisible(false);
 			}
+			loadEventButton.setText("Load next event");
 			loadEventButton.setVisible(false);
 			nameTextBox.setVisible(false);
 			statsGridPane.setVisible(true);
@@ -172,7 +182,20 @@ public class MainMenuController {
 			updatePlayerStats();
 			eventDescriptionLabel.setVisible(true);
 			eventResultLabel.setVisible(false);
-			displayNextEvent(event);
+			if (player.isAlive() == false) {
+				FadeTransition fade = new FadeTransition();
+				fade.setDuration(Duration.millis(5000));
+				fade.setFromValue(0);
+				fade.setToValue(1);
+				fade.setCycleCount(1);
+				fade.setNode(youDiedImage);
+				fade.play();
+				youDiedImage.setVisible(true);
+				deadButton.setVisible(true);
+				eventDescriptionLabel.setVisible(false);
+			} else {
+				displayNextEvent(event);
+			}
 		}
 	}
 

@@ -122,35 +122,25 @@ public class MainMenuController {
 		if (eventIndex < story.length()) {
 			System.out.println(story.getEvent(eventIndex).getDescription());
 			eventDescriptionLabel.setText(story.getEvent(eventIndex).getDescription());
-			if (story.getEvent(eventIndex).getChoice('1').getDescription() != null) {
-				choiceOneButton.setVisible(true);
-				choiceOneLabel.setVisible(true);
-				choiceOneLabel.setText(story.getEvent(eventIndex).getChoice('1').getDescription());
-			} else {
-				choiceOneLabel.setVisible(false);
-				choiceOneButton.setVisible(false);
-			}
-			if (story.getEvent(eventIndex).getChoice('2').getDescription() != null) {
-				choiceTwoButton.setVisible(true);
-				choiceTwoLabel.setVisible(true);
-				choiceTwoLabel.setText(story.getEvent(eventIndex).getChoice('2').getDescription());
-			} else {
-				choiceTwoLabel.setVisible(false);
-				choiceTwoButton.setVisible(false);
-			}
-			if (story.getEvent(eventIndex).getChoice('3').getDescription() != null) {
-				choiceThreeButton.setVisible(true);
-				choiceThreeLabel.setVisible(true);
-				choiceThreeLabel.setText(story.getEvent(eventIndex).getChoice('3').getDescription());
-			} else {
-				choiceThreeLabel.setVisible(false);
-				choiceThreeButton.setVisible(false);
-			}
+			updateChoiceText(choiceOneButton, choiceOneLabel, '1');
+			updateChoiceText(choiceTwoButton, choiceTwoLabel, '2');
+			updateChoiceText(choiceThreeButton, choiceThreeLabel, '3');
 		} else {
 			// to-be transition to the boss Room
 			story = new Story(game, 5);
 			eventIndex = 0;
 			displayNextEvent(event);
+		}
+	}
+
+	private void updateChoiceText(Button choiceButton, Label choiceLabel, char i) {
+		if (story.getEvent(eventIndex) == null || story.getEvent(eventIndex).getChoice(i) == null || story.getEvent(eventIndex).getChoice(i).getDescription() == null) {
+			choiceLabel.setVisible(false);
+			choiceButton.setVisible(false);
+		} else {
+			choiceButton.setVisible(true);
+			choiceLabel.setVisible(true);
+			choiceLabel.setText(story.getEvent(eventIndex).getChoice(i).getDescription());
 		}
 	}
 

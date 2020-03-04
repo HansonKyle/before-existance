@@ -101,16 +101,19 @@ public class MainMenuController {
 
 	@FXML
 	void quitButtonClicked(ActionEvent event) {
+		// Quits game by closing window
 		Stage stage = (Stage) quitButton.getScene().getWindow();
 		stage.close();
 	}
 
 	@FXML
 	void nameTextBoxEdit(ActionEvent event) {
+		// Updates player name by text entered in text box
 		player.setName(nameTextBox.getText().toUpperCase());
 	}
 
-	void updatePlayerStats() { // Updates the player statistics grid box with current values
+	void updatePlayerStats() { 
+		// Updates the player statistics grid box with current values
 		playerNameLabel.setText(" " + player.getName());
 		playerHealthLabel.setText(" " + String.valueOf(player.getHealth()));
 		currentWeaponLabel.setText(" " + player.getCurrentWeapon().getName() + " ("
@@ -119,8 +122,8 @@ public class MainMenuController {
 	}
 
 	void displayNextEvent(ActionEvent event) throws IOException {
+		// Displays available choice text with corresponding buttons
 		if (eventIndex < story.length()) {
-			System.out.println(story.getEvent(eventIndex).getDescription());
 			eventDescriptionLabel.setText(story.getEvent(eventIndex).getDescription());
 			updateChoiceText(choiceOneButton, choiceOneLabel, '1');
 			updateChoiceText(choiceTwoButton, choiceTwoLabel, '2');
@@ -134,6 +137,7 @@ public class MainMenuController {
 	}
 
 	private void updateChoiceText(Button choiceButton, Label choiceLabel, char i) {
+		// Checks for available choice text and corresponding buttons
 		if (story.getEvent(eventIndex) == null || story.getEvent(eventIndex).getChoice(i) == null || story.getEvent(eventIndex).getChoice(i).getDescription() == null) {
 			choiceLabel.setVisible(false);
 			choiceButton.setVisible(false);
@@ -146,6 +150,7 @@ public class MainMenuController {
 
 	@FXML
 	void quitToMainMenu(ActionEvent event) throws IOException {
+		// Switches screen to main menu after death
 		Parent eventSceneParent = FXMLLoader.load(getClass().getClassLoader().getResource("core/MainMenu.fxml"));
 		Scene eventScene = new Scene(eventSceneParent);
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -154,7 +159,8 @@ public class MainMenuController {
 	}
 
 	@FXML
-	void loadEvent(ActionEvent event) throws IOException { // Loads next event on button clock
+	void loadEvent(ActionEvent event) throws IOException { 
+		// Loads next event on button clock
 		if (player.getName().contentEquals("Default")) {
 			nameErrorLabel.setVisible(true);
 		} else {
@@ -190,8 +196,8 @@ public class MainMenuController {
 	}
 
 	public void reset() {
+		// Switches button visibility to loadEventButton only
 		updatePlayerStats();
-		System.out.println(player.getHealth());
 		loadEventButton.setVisible(true);
 		choiceOneLabel.setVisible(false);
 		choiceTwoLabel.setVisible(false);
@@ -204,6 +210,7 @@ public class MainMenuController {
 
 	@FXML
 	void ChoiceOneButtonClick(ActionEvent event) {
+		// Activates choice one
 		story.getEvent(eventIndex).getChoice('1').activate();
 		player.removeHealth(story.getEvent(eventIndex).getHealthLost());
 		eventResultLabel.setText(story.getEvent(eventIndex).getChoiceResult());
@@ -213,6 +220,7 @@ public class MainMenuController {
 
 	@FXML
 	void ChoiceTwoButtonClick(ActionEvent event) {
+		// Activates choice two
 		story.getEvent(eventIndex).getChoice('2').activate();
 		player.removeHealth(story.getEvent(eventIndex).getHealthLost());
 		eventResultLabel.setText(story.getEvent(eventIndex).getChoiceResult());
@@ -222,6 +230,7 @@ public class MainMenuController {
 
 	@FXML
 	void ChoiceThreeButtonClick(ActionEvent event) {
+		// Activates choice three
 		story.getEvent(eventIndex).getChoice('3').activate();
 		player.removeHealth(story.getEvent(eventIndex).getHealthLost());
 		eventResultLabel.setText(story.getEvent(eventIndex).getChoiceResult());

@@ -14,7 +14,7 @@ public class TreasureEvent extends Event {
 				double randomChance = Math.random();
 				
 				if (randomChance <= 0.15) {
-					setChoiceResult("The treasure chest creaks open, briefly exposing the gold inside before teeth emerge from the chest and chomp down on your arm (-30 Health). \nThe chest keeps its lid closed and refuses to open. \nHaving been defeated by a wooden chest, you leave the room through a door on the other side.");
+					setChoiceResult("The treasure chest creaks open, briefly exposing the gold inside before \nteeth emerge from the chest and chomp down on your arm (-30 Health). \nThe chest keeps its lid closed and refuses to open. \nHaving been defeated by a wooden chest, you leave the room through a door on the other side.");
 					// 15% chance to be chomped by a chest
 					setHealthLost(30);
 				} else if (randomChance <= 80) {
@@ -22,7 +22,7 @@ public class TreasureEvent extends Event {
 					// 65% chance to be unlucky
 					setHealthLost(0);
 				} else {
-					setChoiceResult("You open the chest to reveal a full bottle with a label that says 'Health potion, will heal 25 health'. \nYou leave the room through a door on the other side of the room.");
+					setChoiceResult("You open the chest to reveal a full bottle with a label that says \n'Health potion, will heal 25 health'. \nYou leave the room through a door on the other side of the room.");
 					// 20% chance to get health potion
 					setHealthLost(0);
 				}
@@ -34,11 +34,11 @@ public class TreasureEvent extends Event {
 				double randomChance = Math.random();
 				
 				if (randomChance <= 0.15) {
-					setChoiceResult("Just before you leave the room, you hear the chest move and growl. You made a good choice leaving the chest alone.");
+					setChoiceResult("Just before you leave the room, you hear the chest move and growl. \nYou made a good choice leaving the chest alone.");
 					// 15% chance to hear a mimic
 					setHealthLost(0);
 				} else if (randomChance <= 50) {
-					setChoiceResult("Just before you leave the room, another person enters through the door you came from and opens the chest. \nThey take out a wand and immediately teleport away. Weird.");
+					setChoiceResult("Just before you leave the room, another person enters through the \ndoor you came from and opens the chest. \nThey take out a wand and immediately teleport away. Weird.");
 					// 35% chance to see wizard
 					setHealthLost(0);
 				} else {

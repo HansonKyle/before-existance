@@ -37,7 +37,7 @@ public class BigHandEvent extends Event {
 				double randomChance = Math.random();
 				
 				if (randomChance <= 0.50) {
-					setChoiceResult("You stab the hand and it immediately surrenders, as the hand hates splinters. The hand opens the door you entered through and pushes you into a new room.");
+					setChoiceResult("You stab the hand and it immediately surrenders, as the hand hates splinters. \nThe hand opens the door you entered through and pushes you into a new room.");
 					// 50% chance for the hand to surrender
 					setHealthLost(0);
 				} else {

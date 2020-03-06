@@ -19,11 +19,11 @@ public class SquirrelsEvent extends Event {
 					// 50% chance to escape squirrels
 					setHealthLost(0);
 				} else if (randomChance <= 85) {
-					setChoiceResult("You start to sneak towards the door but you step on a stray nut. The army is awake, but they are happy because nut. \nYou manage to get to the close door into the next room.");
+					setChoiceResult("You start to sneak towards the door but you step on a stray nut. \nThe army is awake, but they are happy because nut. \nYou manage to get to the close door into the next room.");
 					// 35% chance to step on a nut
 					setHealthLost(0);
 				} else {
-					setChoiceResult("You start to sneak towards the door but a small spider spooks you and you fall right on top of all of the squirrels. \nYou are then killed by an army of squirrels and the last thought running through your mind is 'Squirrel crowdsurfing'");
+					setChoiceResult("You start to sneak towards the door but a small spider spooks you \nand you fall right on top of all of the squirrels. \nYou are then killed by an army of squirrels and the last thought running through your mind is 'Squirrel crowdsurfing'");
 					// 15% chance to die
 					setHealthLost(Integer.MAX_VALUE);
 				}
@@ -39,7 +39,7 @@ public class SquirrelsEvent extends Event {
 					// 15% chance to escape
 					setHealthLost(0);
 				} else {
-					setChoiceResult("A lone squirrel wakes up as you pass the close door. The squirrel says one word, in perfect English. One word that will strike fear into anyone who hears a squirrel say it. \n\n'Bruh' -Lone Squirrel \n\nYou immediately open the close door behind you and leave the squirrels alone.");
+					setChoiceResult("A lone squirrel wakes up as you pass the close door. The squirrel says one word, in perfect English. \nOne word that will strike fear into anyone who hears a squirrel say it. \n\n'Bruh' -Lone Squirrel \n\nYou immediately open the close door behind you and leave the squirrels alone.");
 					// 85% chance for bruh
 					setHealthLost(0);
 				}

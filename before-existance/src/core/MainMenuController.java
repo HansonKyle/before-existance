@@ -5,10 +5,16 @@ import java.io.IOException;
 import entity.Player;
 import event.story.Story;
 import item.Weapon;
+import javafx.animation.Animation;
 import javafx.animation.FadeTransition;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -88,6 +94,9 @@ public class MainMenuController {
 
 	@FXML
 	private Button deadButton;
+	
+	@FXML
+	private ImageView logoImageView;
 
 	@FXML
 	void startButtonClicked(ActionEvent event) throws IOException {
@@ -112,7 +121,7 @@ public class MainMenuController {
 		player.setName(nameTextBox.getText().toUpperCase());
 	}
 
-	void updatePlayerStats() { 
+	void updatePlayerStats() {
 		// Updates the player statistics grid box with current values
 		playerNameLabel.setText(" " + player.getName());
 		playerHealthLabel.setText(" " + String.valueOf(player.getHealth()));
@@ -121,10 +130,31 @@ public class MainMenuController {
 		roomCountLabel.setText(" " + String.valueOf(player.getDungeonsSurvived()));
 	}
 
+	public void animateText(String textToAnimate, Label destination) {
+		/*
+		 * Animation adapted from
+		 * https://stackoverflow.com/questions/33646317/typing-animation-on-a-text-with-
+		 * javafx
+		 */
+		final IntegerProperty i = new SimpleIntegerProperty(0);
+		Timeline timeline = new Timeline();
+		KeyFrame keyFrame = new KeyFrame(Duration.millis(10), EventHandler -> {
+			if (i.get() > textToAnimate.length()) {
+				timeline.stop();
+			} else {
+				destination.setText(textToAnimate.substring(0, i.get()));
+				i.set(i.get() + 1);
+			}
+		});
+		timeline.getKeyFrames().add(keyFrame);
+		timeline.setCycleCount(Animation.INDEFINITE);
+		timeline.play();
+	}
+
 	void displayNextEvent(ActionEvent event) throws IOException {
 		// Displays available choice text with corresponding buttons
 		if (eventIndex < story.length()) {
-			eventDescriptionLabel.setText(story.getEvent(eventIndex).getDescription());
+			animateText(story.getEvent(eventIndex).getDescription(), eventDescriptionLabel);
 			updateChoiceText(choiceOneButton, choiceOneLabel, '1');
 			updateChoiceText(choiceTwoButton, choiceTwoLabel, '2');
 			updateChoiceText(choiceThreeButton, choiceThreeLabel, '3');
@@ -138,7 +168,8 @@ public class MainMenuController {
 
 	private void updateChoiceText(Button choiceButton, Label choiceLabel, char i) {
 		// Checks for available choice text and corresponding buttons
-		if (story.getEvent(eventIndex) == null || story.getEvent(eventIndex).getChoice(i) == null || story.getEvent(eventIndex).getChoice(i).getDescription() == null) {
+		if (story.getEvent(eventIndex) == null || story.getEvent(eventIndex).getChoice(i) == null
+				|| story.getEvent(eventIndex).getChoice(i).getDescription() == null) {
 			choiceLabel.setVisible(false);
 			choiceButton.setVisible(false);
 		} else {
@@ -159,13 +190,16 @@ public class MainMenuController {
 	}
 
 	@FXML
-	void loadEvent(ActionEvent event) throws IOException { 
+	void loadEvent(ActionEvent event) throws IOException {
 		// Loads next event on button clock
 		if (player.getName().contentEquals("Default")) {
 			nameErrorLabel.setVisible(true);
 		} else {
 			if (nameErrorLabel.isVisible() == true) {
 				nameErrorLabel.setVisible(false);
+				if(player.getName().contentEquals("FORTNITE")) {
+					playSprite();
+				}
 			}
 			loadEventButton.setText("Load next event");
 			loadEventButton.setVisible(false);
@@ -208,33 +242,43 @@ public class MainMenuController {
 		eventIndex++;
 	}
 
+	public void choiceActivation(char num) {
+		story.getEvent(eventIndex).getChoice(num).activate();
+		player.removeHealth(story.getEvent(eventIndex).getHealthLost());
+		animateText((story.getEvent(eventIndex).getChoiceResult()), eventResultLabel);
+		eventResultLabel.setVisible(true);
+		reset();
+	}
+
 	@FXML
 	void ChoiceOneButtonClick(ActionEvent event) {
 		// Activates choice one
-		story.getEvent(eventIndex).getChoice('1').activate();
-		player.removeHealth(story.getEvent(eventIndex).getHealthLost());
-		eventResultLabel.setText(story.getEvent(eventIndex).getChoiceResult());
-		eventResultLabel.setVisible(true);
-		reset();
+		choiceActivation('1');
 	}
 
 	@FXML
 	void ChoiceTwoButtonClick(ActionEvent event) {
 		// Activates choice two
-		story.getEvent(eventIndex).getChoice('2').activate();
-		player.removeHealth(story.getEvent(eventIndex).getHealthLost());
-		eventResultLabel.setText(story.getEvent(eventIndex).getChoiceResult());
-		eventResultLabel.setVisible(true);
-		reset();
+		choiceActivation('2');
 	}
 
 	@FXML
 	void ChoiceThreeButtonClick(ActionEvent event) {
 		// Activates choice three
-		story.getEvent(eventIndex).getChoice('3').activate();
-		player.removeHealth(story.getEvent(eventIndex).getHealthLost());
-		eventResultLabel.setText(story.getEvent(eventIndex).getChoiceResult());
-		eventResultLabel.setVisible(true);
-		reset();
+		choiceActivation('3');
 	}
+	
+	
+	public void playSprite() {
+		int xOffset = 8;
+		int yOffset = 0;
+		int xSize = 38;
+		int ySize = 45;
+		logoImageView.setVisible(true);
+		logoImageView.setViewport(new Rectangle2D(xOffset, yOffset, xSize, ySize));
+		
+		Animation anim = new SpriteAnimation(logoImageView, Duration.millis(4000), 36, 6, xOffset, yOffset, xSize, ySize);
+		anim.setCycleCount(Animation.INDEFINITE);
+		anim.play();
+	} 
 }

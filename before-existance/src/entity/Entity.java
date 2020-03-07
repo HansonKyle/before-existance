@@ -1,6 +1,7 @@
 package entity;
 import item.Weapon;
 
+// Represents a character in game that can be damaged and is prone to dying
 public abstract class Entity {
 	
 	private String name;

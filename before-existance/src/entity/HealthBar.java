@@ -1,4 +1,9 @@
 package entity;
+
+/*
+ * Prints the info of an entity's health to the console.
+ * Will be converted to GUI in the future.
+ */
 public class HealthBar {
 	
 	private Entity entity;

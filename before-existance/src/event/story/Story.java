@@ -4,14 +4,16 @@ import core.Game;
 import event.Event;
 import event.EventGenerator;
 
+// Story class stores events in an array and prints events for player to read and respond to.
 public class Story {
 
 	private final EventGenerator eventGenerator;
 	
-	private Game game;
 	private Event[] events;
 
-	public Story(Game game, int numEvents) {
+	private Game game;
+
+	public Story(Game game, int numEvents) { // Generates list of events using eventGenerator class
 		this.game = game;
 		this.events = new Event[numEvents];
 		this.eventGenerator = new EventGenerator(game);
@@ -20,33 +22,13 @@ public class Story {
 			events[i] = eventGenerator.generateUniqueEvent();
 		}
 	}
-
-	public void start() {
-		if (game.getPlayer() == null) {
-			game.initPlayer();
-		}
-		
-		int i = 0;
-		while (i < events.length && game.getPlayer().isAlive()) {
-			System.out.println(events[i].getDescription());
-			events[i].displayChoices();
-			events[i].requestChoice();
-			System.out.println();
-			i++;
-		}
-		if (game.getPlayer().isAlive()) {
-			game.getPlayer().dungeonSurvived();
-			System.out.println("----------------------------------");
-			System.out.println("You have completed this dungeon. Congratulations!");
-			System.out.println("Current Stats: " + game.getPlayer());
-			System.out.println("----------------------------------\n");
-		} else {
-			System.out.println("----------------------------------");
-			System.out.println("Game over.");
-			System.out.println("----------------------------------\n");
-			game.setPlayer(null);
-		}
-		game.displayMenu();
+	
+	public int length() {
+		return events.length;
+	}
+	
+	public Event getEvent(int i) {
+		return events[i];
 	}
 
 	@Override

@@ -1,4 +1,5 @@
 package item;
+
 public class Spell {
 	
 	private String name;

@@ -1,4 +1,5 @@
 package entity;
+
 import java.util.ArrayList;
 
 import item.Item;
@@ -22,7 +23,10 @@ public class Player extends Entity {
 	
 	@Override
 	public void die() {
-		
+		System.out.println("\n----------------------------------");
+		System.out.println("Game over.");
+		System.out.println("----------------------------------");
+		dungeonsSurvived = 0;
 	}
 	
 	@Override

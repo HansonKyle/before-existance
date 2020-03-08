@@ -1,13 +1,16 @@
 package core;
 
 import entity.Player;
+import event.Event;
 import event.Menu;
+import event.story.Story;
 
 // Initializes the menu and player classes
 public class Game {
 	
 	private final Input input = new Input();
 	private final Menu menu;
+	private Story currentStory;
 	private Player player;
 
 	public Game() {
@@ -34,6 +37,30 @@ public class Game {
 		System.out.println();
 	}
 	
+	public void start() {
+		if (player == null || player.getDungeonsSurvived() == 0) {
+			initPlayer();
+		}
+		
+		Event[] events = currentStory.getEvents();
+		int i = 0;
+		while (i < events.length && player.isAlive()) { // Displays and requests input for every event in the array
+			System.out.println(events[i].getDescription());
+			events[i].displayChoices();
+			events[i].requestChoice();
+			System.out.println(events[i].getChoiceResult() + "\n");
+			i++;
+		}
+		if (player.isAlive()) { // If player is alive, print end of dungeon screen 
+			player.dungeonSurvived();
+			System.out.println("----------------------------------");
+			System.out.println("You have completed this dungeon. Congratulations!");
+			System.out.println("Current Stats: " + player);
+			System.out.println("----------------------------------\n");
+		}
+		displayMenu();
+	}
+	
 	// Prints the menu to the screen and waits for user input
 	public void close() {
 		input.close();
@@ -41,6 +68,14 @@ public class Game {
 	
 	public Input getInput() {
 		return input;
+	}
+	
+	public Story getCurrentStory() {
+		return currentStory;
+	}
+
+	public void setCurrentStory(Story currentStory) {
+		this.currentStory = currentStory;
 	}
 	
 	public Player getPlayer() {

@@ -212,7 +212,6 @@ public class MainMenuController {
 	void ChoiceOneButtonClick(ActionEvent event) {
 		// Activates choice one
 		story.getEvent(eventIndex).getChoice('1').activate();
-		player.removeHealth(story.getEvent(eventIndex).getHealthLost());
 		eventResultLabel.setText(story.getEvent(eventIndex).getChoiceResult());
 		eventResultLabel.setVisible(true);
 		reset();
@@ -222,7 +221,6 @@ public class MainMenuController {
 	void ChoiceTwoButtonClick(ActionEvent event) {
 		// Activates choice two
 		story.getEvent(eventIndex).getChoice('2').activate();
-		player.removeHealth(story.getEvent(eventIndex).getHealthLost());
 		eventResultLabel.setText(story.getEvent(eventIndex).getChoiceResult());
 		eventResultLabel.setVisible(true);
 		reset();
@@ -232,7 +230,6 @@ public class MainMenuController {
 	void ChoiceThreeButtonClick(ActionEvent event) {
 		// Activates choice three
 		story.getEvent(eventIndex).getChoice('3').activate();
-		player.removeHealth(story.getEvent(eventIndex).getHealthLost());
 		eventResultLabel.setText(story.getEvent(eventIndex).getChoiceResult());
 		eventResultLabel.setVisible(true);
 		reset();

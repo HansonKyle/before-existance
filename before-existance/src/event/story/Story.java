@@ -10,7 +10,7 @@ public class Story {
 	private final EventGenerator eventGenerator;
 	
 	private Event[] events;
-
+	
 	private Game game;
 
 	public Story(Game game, int numEvents) { // Generates list of events using eventGenerator class
@@ -21,6 +21,29 @@ public class Story {
 		for (int i = 0; i < events.length; i++) {
 			events[i] = eventGenerator.generateUniqueEvent();
 		}
+	}
+	
+	public void start() {
+		if (game.getPlayer() == null || game.getPlayer().getDungeonsSurvived() == 0) {
+			game.initPlayer();
+		}
+		
+		int i = 0;
+		while (i < events.length && game.getPlayer().isAlive()) { // Displays and requests input for every event in the array
+			System.out.println(events[i].getDescription());
+			events[i].displayChoices();
+			events[i].requestChoice();
+			System.out.println();
+			i++;
+		}
+		if (game.getPlayer().isAlive()) { // If player is alive, print end of dungeon screen 
+			game.getPlayer().dungeonSurvived();
+			System.out.println("----------------------------------");
+			System.out.println("You have completed this dungeon. Congratulations!");
+			System.out.println("Current Stats: " + game.getPlayer());
+			System.out.println("----------------------------------\n");
+		}
+		game.displayMenu();
 	}
 	
 	public int length() {

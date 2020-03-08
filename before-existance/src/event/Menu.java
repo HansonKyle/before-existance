@@ -1,4 +1,5 @@
 package event;
+
 import core.Game;
 import event.story.Story;
 
@@ -11,7 +12,8 @@ public class Menu extends Event {
 			@Override
 			public void activate() {
 				Story mainStory = new Story(game, 4);
-				mainStory.start();
+				game.setCurrentStory(mainStory);
+				game.start();
 			}
 		});
 		

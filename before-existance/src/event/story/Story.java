@@ -8,13 +8,9 @@ import event.EventGenerator;
 public class Story {
 
 	private final EventGenerator eventGenerator;
-	
 	private Event[] events;
-	
-	private Game game;
 
 	public Story(Game game, int numEvents) { // Generates list of events using eventGenerator class
-		this.game = game;
 		this.events = new Event[numEvents];
 		this.eventGenerator = new EventGenerator(game);
 		
@@ -23,35 +19,20 @@ public class Story {
 		}
 	}
 	
-	public void start() {
-		if (game.getPlayer() == null || game.getPlayer().getDungeonsSurvived() == 0) {
-			game.initPlayer();
+	public Event[] getEvents() {
+		Event[] events = new Event[this.events.length];
+		for (int i = 0; i < events.length; i++) {
+			events[i] = this.events[i];
 		}
-		
-		int i = 0;
-		while (i < events.length && game.getPlayer().isAlive()) { // Displays and requests input for every event in the array
-			System.out.println(events[i].getDescription());
-			events[i].displayChoices();
-			events[i].requestChoice();
-			System.out.println();
-			i++;
-		}
-		if (game.getPlayer().isAlive()) { // If player is alive, print end of dungeon screen 
-			game.getPlayer().dungeonSurvived();
-			System.out.println("----------------------------------");
-			System.out.println("You have completed this dungeon. Congratulations!");
-			System.out.println("Current Stats: " + game.getPlayer());
-			System.out.println("----------------------------------\n");
-		}
-		game.displayMenu();
-	}
-	
-	public int length() {
-		return events.length;
+		return events;
 	}
 	
 	public Event getEvent(int i) {
 		return events[i];
+	}
+	
+	public int length() {
+		return events.length;
 	}
 
 	@Override

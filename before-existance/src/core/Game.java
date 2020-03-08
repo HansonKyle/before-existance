@@ -1,15 +1,26 @@
 package core;
 
 import entity.Player;
+import event.Menu;
 
 // Initializes the menu and player classes
 public class Game {
 	
 	private final Input input = new Input();
+	private final Menu menu;
 	private Player player;
 
 	public Game() {
-		
+		this.menu = new Menu(this);
+		displayMenu();
+	}
+	
+	// Prints the menu to the screen and waits for user input
+	public void displayMenu() {
+		System.out.println("| DUNGEON CRAWLER |");
+		System.out.println(menu);
+		menu.displayChoices();
+		menu.requestChoice();
 	}
 	
 	// Initializes the player by retrieving user input
@@ -24,7 +35,6 @@ public class Game {
 	}
 	
 	// Prints the menu to the screen and waits for user input
-	
 	public void close() {
 		input.close();
 	}

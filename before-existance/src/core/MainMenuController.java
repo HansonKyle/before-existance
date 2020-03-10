@@ -36,11 +36,14 @@ public class MainMenuController {
 	private int eventIndex = 0;
 
 	@FXML
-	private Button startButton;
-
+	private Button playButton;
+	
+	@FXML
+	private Button howToPlayButton;
+	
 	@FXML
 	private Button quitButton;
-
+	
 	@FXML
 	private Button choiceOneButton;
 
@@ -104,6 +107,7 @@ public class MainMenuController {
 		Parent eventSceneParent = FXMLLoader.load(getClass().getClassLoader().getResource("core/EventScene.fxml"));
 		Scene eventScene = new Scene(eventSceneParent);
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+		//eventScene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		window.setScene(eventScene);
 		window.show();
 	}
@@ -185,6 +189,7 @@ public class MainMenuController {
 		Parent eventSceneParent = FXMLLoader.load(getClass().getClassLoader().getResource("core/MainMenu.fxml"));
 		Scene eventScene = new Scene(eventSceneParent);
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+		eventScene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		window.setScene(eventScene);
 		window.show();
 	}
@@ -281,4 +286,14 @@ public class MainMenuController {
 		anim.setCycleCount(Animation.INDEFINITE);
 		anim.play();
 	} 
+	
+	public void howToPlayButtonPressed(ActionEvent event) throws IOException {
+		Parent howToPlayParent = FXMLLoader.load(getClass().getResource("HowToPlay.fxml"));
+		Scene howToPlayScene = new Scene(howToPlayParent);
+		//This line gets stage info
+		Stage window = (Stage)(((Node) event.getSource()).getScene().getWindow());
+		howToPlayScene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+		window.setScene(howToPlayScene);
+		window.show();
+	}
 }

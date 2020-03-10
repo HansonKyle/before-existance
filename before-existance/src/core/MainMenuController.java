@@ -137,8 +137,7 @@ public class MainMenuController {
 	public void animateText(String textToAnimate, Label destination) {
 		/*
 		 * Animation adapted from
-		 * https://stackoverflow.com/questions/33646317/typing-animation-on-a-text-with-
-		 * javafx
+		 * https://stackoverflow.com/questions/33646317/typing-animation-on-a-text-with-javafx/
 		 */
 		final IntegerProperty i = new SimpleIntegerProperty(0);
 		Timeline timeline = new Timeline();
@@ -229,6 +228,7 @@ public class MainMenuController {
 				deadButton.setVisible(true);
 				eventDescriptionLabel.setVisible(false);
 			} else {
+				player.setDungeonsSurvived(player.getDungeonsSurvived() + 1);
 				displayNextEvent(event);
 			}
 		}

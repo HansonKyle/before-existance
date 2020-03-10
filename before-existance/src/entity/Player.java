@@ -7,8 +7,9 @@ import item.Weapon;
 
 public class Player extends Entity {
 	
-	private ArrayList<Item> inventory = new ArrayList<Item>();
+	private ArrayList<Item> itemInventory = new ArrayList<Item>();
 	private ArrayList<Spell> spellbook = new ArrayList<Spell>();
+	private ArrayList<Weapon> weaponInventory = new ArrayList<Weapon>();
 	
 	private int dungeonsSurvived = 0;
 
@@ -31,15 +32,15 @@ public class Player extends Entity {
 	}
 	
 	public void addItem(Item i) {
-		inventory.add(i);
+		itemInventory.add(i);
 	}
 	
 	public void removeItem(Item i) {
-		inventory.remove(i);
+		itemInventory.remove(i);
 	}
 	
 	public ArrayList<Item> getInventory() {
-		return inventory;
+		return itemInventory;
 	}
 	
 	public void learnSpell(Spell s) {
@@ -48,6 +49,18 @@ public class Player extends Entity {
 	
 	public ArrayList<Spell> getSpellbook() {
 		return spellbook;
+	}
+	
+	public void addWeapon(Weapon w) {
+		weaponInventory.add(w);
+	}
+	
+	public void removeWeapon(Weapon w) {
+		weaponInventory.remove(w);
+	}
+	
+	public ArrayList<Weapon> getWeaponInventory(){
+		return weaponInventory;
 	}
 	
 	public int getDungeonsSurvived() {

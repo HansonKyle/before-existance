@@ -23,6 +23,8 @@ public class HowToPlayController {
 		
 		//This line gets stage info
 		Stage window = (Stage)(((Node)event.getSource()).getScene().getWindow());
+		howToPlayScene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+		
 		window.setScene(howToPlayScene);
 		window.show();	
 		}

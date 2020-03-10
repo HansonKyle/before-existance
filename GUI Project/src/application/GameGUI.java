@@ -11,7 +11,7 @@ public class GameGUI extends Application{
 	public void start(Stage stage) throws Exception{
 		Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
 		Scene scene = new Scene(root);
-		
+		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		// Start with first scene by default
 		stage.setScene(scene);	
 		stage.show();

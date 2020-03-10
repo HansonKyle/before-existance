@@ -6,16 +6,16 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HowToPlayController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HowToPlayController">
    <children>
-      <Label alignment="TOP_CENTER" layoutX="185.0" layoutY="41.0" text="How To Play">
+      <Label alignment="TOP_CENTER" layoutX="244.0" layoutY="28.0" text="About" textFill="#5be500">
          <font>
-            <Font size="44.0" />
+            <Font name="Apple Chancery" size="44.0" />
          </font>
       </Label>
-      <Text layoutX="75.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This is a text based game in which the user goes on an adventure exploring dungeons and has to make game altering decisions in order to survive and conquer. Using the tools and spells in the users inventory they will face quests and foes that they will have to defeat. By following each room the user will try to conquer each dungeon.&#10;" wrappingWidth="474.626953125">
+      <Text fill="#5be500" layoutX="75.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This is a text based game in which the user goes on an adventure exploring dungeons and has to make game altering decisions in order to survive and conquer. Using the tools and spells in the users inventory they will face quests and foes that they will have to defeat. By following each room the user will try to conquer each dungeon.&#10;" wrappingWidth="474.626953125">
          <font>
-            <Font size="23.0" />
+            <Font name="American Typewriter" size="23.0" />
          </font>
       </Text>
       <Button fx:id="returnToMainButton" layoutX="443.0" layoutY="325.0" mnemonicParsing="false" onAction="#howToPlayButtonPressed" text="Return To Main Menu" />

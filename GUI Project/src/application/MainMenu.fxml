@@ -7,22 +7,22 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainMenuController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainMenuController">
    <left>
       <VBox alignment="CENTER" BorderPane.alignment="CENTER">
          <children>
             <Region VBox.vgrow="ALWAYS" />
             <Text fill="#42e422" stroke="#42f81e" strokeType="OUTSIDE" strokeWidth="0.0" text="Dungeon Crawlers" textAlignment="CENTER" VBox.vgrow="ALWAYS">
                <font>
-                  <Font name="American Typewriter" size="38.0" />
+                  <Font name="Apple Chancery" size="45.0" />
                </font>
             </Text>
             <Region prefWidth="600.0" VBox.vgrow="ALWAYS" />
-            <Button fx:id="playButton" mnemonicParsing="false" text="Play" textFill="#d92929" VBox.vgrow="ALWAYS" />
+            <Button fx:id="playButton" mnemonicParsing="false" text="Play" textFill="#222020" VBox.vgrow="ALWAYS" />
             <Region VBox.vgrow="ALWAYS" />
-            <Button fx:id="howToPlayButton" alignment="CENTER" mnemonicParsing="false" onAction="#howToPlayButtonPressed" text="How To Play" textFill="#e42727" VBox.vgrow="ALWAYS" />
+            <Button fx:id="howToPlayButton" alignment="CENTER" mnemonicParsing="false" onAction="#howToPlayButtonPressed" text="About" textFill="#1b1919" VBox.vgrow="ALWAYS" />
             <Region VBox.vgrow="ALWAYS" />
-            <Button fx:id="quitButton" mnemonicParsing="false" onAction="#quitButtonClicked" text="Quit" textFill="#ff1f1f" VBox.vgrow="ALWAYS" />
+            <Button fx:id="quitButton" mnemonicParsing="false" onAction="#quitButtonClicked" text="Quit" textFill="#252323" VBox.vgrow="ALWAYS" />
             <Region VBox.vgrow="ALWAYS" />
          </children>
       </VBox>

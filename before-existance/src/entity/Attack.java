@@ -1,48 +1,30 @@
 package entity;
+import java.util.Random;
 public class Attack {
 	
-	// Two entities one being the target of the attack and one being the attacker or source of damage
-	private Entity target;
-	private Entity attacker;
+	private static Random random = new Random();
 	
-	public Attack(Entity target, Entity attacker) {
-		this.target = target;
-		this.attacker = attacker;
-	}
-	
-	public Entity getTarget() {
-		return target;
-	}
-	
-	public void setTarget(Entity target) {
-		this.target = target;
-	}
-	
-	public Entity getAttacker() {
-		return attacker;
-	}
-	
-	public void setAttacker(Entity attacker) {
-		this.attacker = attacker;
-	}
-	
-	public void attack(Entity attacker, Entity target) {
-		if (TurnBased.firstTurn() == true) {
-			target.removeHealth(attacker.getCurrentWeapon().getDamage());
-			attacker.removeHealth(target.getCurrentWeapon().getDamage());
+	/* This method handles that attack action
+	 * Each weapon has a percent chance to successfully hit so the method generates a random number out of 100
+	 * to determine whether the attack is successful or not
+	 * Every attack also has a 1/100 chance to crit making the attack deal double damage so the method generates
+	 * another random number out of 100 and if it is 1 then the damage is doubled.
+	 * After determining whether the attack will hit and the damage it will deal the targets health is reduced by
+	 * the damage and a statement is printed stating how much damage the attack dealt
+	 */
+	public static int attacking(Entity attacker, Entity target) {
+		int hitRoll = random.nextInt(100);
+		int critChance = random.nextInt(100);
+		int damageDealt = 0;
+		if (hitRoll <= attacker.getCurrentWeapon().getChanceToHit()) {
+			damageDealt = attacker.getCurrentWeapon().getDamage();
+			if (critChance == 1) {
+				damageDealt = damageDealt * 2;
+			}
+			target.removeHealth(damageDealt);
+			//System.out.println("The attack did " + damageDealt + "damage");
 		}
-		else {
-			attacker.removeHealth(target.getCurrentWeapon().getDamage());
-			target.removeHealth(attacker.getCurrentWeapon().getDamage());
-		}
-	}
-	
-	public boolean accuracyCheck(double chance) {	//Checks if the attacker misses or not, chance must be <= 1.0
-		boolean success = false;
-		double num = Math.random();
-		if (num <= chance) {
-			success = true;
-		}
-		return success;
+		//else System.out.println("The attack missed!");
+		return damageDealt;
 	}
 }

@@ -1,5 +1,6 @@
 package item;
-public class Armor extends Equippable {
+
+public class Armor extends Item {
 	
 	private int healthIncrease;
 	
@@ -14,5 +15,11 @@ public class Armor extends Equippable {
 
 	public void setHealthIncrease(int healthIncrease) {
 		this.healthIncrease = healthIncrease;
+	}
+
+	@Override
+	public void use() {
+		// TODO Auto-generated method stub
+		
 	}
 }

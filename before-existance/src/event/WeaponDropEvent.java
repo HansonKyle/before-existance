@@ -20,15 +20,17 @@ public class WeaponDropEvent extends Event {
 		super.setDescription("You found a(n) " + weapon.getName() + " " + "would you like to: ");
 		
 		super.addChoice(new Choice('1', "Add to Inventory ") { // add first choice
-			public void activate() {
-			// add item to player inventory
-				
+			public void activate() {	// add item to player inventory
+				Player player = game.getPlayer();
+				player.addItem(weapon);
 			}
 		});
 		
 		super.addChoice(new Choice('2', "Leave it Behind") { // add second choice
 			//proceed to next event
 			public void activate() {
+				System.out.println("You left the  " + weapon.getName() + " " + "behind.");
+				//end event
 			}
 		});
 	}

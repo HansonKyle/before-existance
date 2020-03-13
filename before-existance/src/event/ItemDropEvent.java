@@ -7,7 +7,7 @@ import core.Game;
 import entity.Player;
 import item.Item;
 import item.Weapon;
-import item.database;
+import item.Database;
 // Event: Item Drop Event
 // Creates an event with 2 choices
 public class ItemDropEvent extends Event {
@@ -22,6 +22,7 @@ public class ItemDropEvent extends Event {
 			public void activate() {	// add item to player inventory
 				Player player = game.getPlayer();
 				player.addItem(item);
+				setEnded(true);
 			}
 		});
 		
@@ -29,7 +30,7 @@ public class ItemDropEvent extends Event {
 			//proceed to next event
 			public void activate() {
 				System.out.println("You left the  " + item.getName() + " " + "behind.");
-				//end event
+				setEnded(true);
 			}
 		});
 	}

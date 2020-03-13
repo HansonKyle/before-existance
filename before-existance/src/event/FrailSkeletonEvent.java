@@ -18,6 +18,7 @@ public class FrailSkeletonEvent extends Event {
 				} else {
 					System.out.println("You poke the frail skeleton and it falls into a pile of bones");
 				}
+				setEnded(true);
 			}
 		});
 		
@@ -28,12 +29,14 @@ public class FrailSkeletonEvent extends Event {
 				if (randomChance <= 0.15) {
 					System.out.println("You trip over a bone while running to the door. Luckily the skeleton has not noticed your clumsiness.");
 				} else if (randomChance <= 0.25) {
-					System.out.println("You trip over a bone while running to the door, but the skeleton noticed you! It throws it's left arm at you (-10 Health) just before you get through the door");
+					System.out.println("You trip over a bone while running to the door, but the skeleton noticed you!"
+							+ "It throws it's left arm at you (-10 Health) just before you get through the door");
 					game.getPlayer().removeHealth(10);
 					System.out.println("Current Stats: " + game.getPlayer());
 				} else {
 					System.out.println("You open the door and walk into the next room.");
 				}
+				setEnded(true);
 			}
 		});
 	}

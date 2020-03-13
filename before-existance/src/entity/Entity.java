@@ -5,6 +5,8 @@ import item.Weapon;
 
 public abstract class Entity {
 	
+	private static final Random random = new Random();
+	
 	private String name;
 	private int health;
 	private int healthCap;
@@ -24,6 +26,28 @@ public abstract class Entity {
 	}
 	
 	public abstract void die();
+	
+	/* This method handles that attack action
+	 * Each weapon has a percent chance to successfully hit so the method generates a random number out of 100
+	 * to determine whether the attack is successful or not
+	 * Every attack also has a 1/100 chance to crit making the attack deal double damage so the method generates
+	 * another random number out of 100 and if it is 1 then the damage is doubled.
+	 * After determining whether the attack will hit and the damage it will deal the targets health is reduced by
+	 * the damage and a statement is printed stating how much damage the attack dealt
+	 */
+	public int attack(Entity target) {
+		int hitRoll = random.nextInt(100);
+		int critChance = random.nextInt(100);
+		int damageDealt = 0;
+		if (hitRoll <= currentWeapon.getChanceToHit()) {
+			damageDealt = currentWeapon.getDamage();
+			if (critChance == 1) {
+				damageDealt = damageDealt * 2;
+			}
+			target.removeHealth(damageDealt);
+		}
+		return damageDealt;
+	}
 	
 	@Override
 	public String toString() {
@@ -98,29 +122,5 @@ public abstract class Entity {
 	
 	public void setCurrentWeapon(Weapon currentWeapon) {
 		this.currentWeapon = currentWeapon;
-	}
-
-	private static Random random = new Random();
-	
-	/* This method handles that attack action
-	 * Each weapon has a percent chance to successfully hit so the method generates a random number out of 100
-	 * to determine whether the attack is successful or not
-	 * Every attack also has a 1/100 chance to crit making the attack deal double damage so the method generates
-	 * another random number out of 100 and if it is 1 then the damage is doubled.
-	 * After determining whether the attack will hit and the damage it will deal the targets health is reduced by
-	 * the damage and a statement is printed stating how much damage the attack dealt
-	 */
-	public int attack(Entity target) {
-		int hitRoll = random.nextInt(100);
-		int critChance = random.nextInt(100);
-		int damageDealt = 0;
-		if (hitRoll <= currentWeapon.getChanceToHit()) {
-			damageDealt = currentWeapon.getDamage();
-			if (critChance == 1) {
-				damageDealt = damageDealt * 2;
-			}
-			target.removeHealth(damageDealt);
-		}
-		return damageDealt;
 	}
 }

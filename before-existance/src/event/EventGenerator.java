@@ -18,19 +18,26 @@ public class EventGenerator {
 	
 	public Event generateUniqueEvent() {
 		Event event = null;
+		
 		while (event == null) {
 			int num = random.nextInt(5);
 			if (!generatedNumbers.contains(num)) {
-				if (num == 0) {
-					event = new FrailSkeletonEvent(game);
-				} else if (num == 1) {
-					event = new SquirrelsEvent(game);
-				} else if (num == 2) {
-					event = new TreasureEvent(game);
-				} else if (num == 3) {
-					event = new BigHandEvent(game);
-				} else {
-					event = new EmptyRoomEvent(game);
+				switch(num) {
+					case 0:
+						event = new FrailSkeletonEvent(game);
+						break;
+					case 1:
+						event = new SquirrelsEvent(game);
+						break;
+					case 2:
+						event = new TreasureEvent(game);
+						break;
+					case 3:
+						event = new BigHandEvent(game);
+						break;
+					case 4:
+						event = new EmptyRoomEvent(game);
+						break;
 				}
 				generatedNumbers.add(num);
 			}

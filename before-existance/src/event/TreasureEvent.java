@@ -12,7 +12,8 @@ public class TreasureEvent extends Event {
 				double randomChance = Math.random();
 				
 				if (randomChance <= 0.15) {
-					System.out.println("The treasure chest creaks open, briefly exposing the gold inside before teeth emerge from the chest and chomp down on your arm (-30 Health). The chest keeps its lid closed and refuses to open.");
+					System.out.println("The treasure chest creaks open, briefly exposing the gold inside before teeth emerge from the chest"
+							+ "and chomp down on your arm (-30 Health). The chest keeps its lid closed and refuses to open.");
 					System.out.println("Having been defeated by a wooden chest, you leave the room through a door on the other side.");
 					game.getPlayer().removeHealth(30);
 					System.out.println("Current Stats: " + game.getPlayer());
@@ -22,6 +23,7 @@ public class TreasureEvent extends Event {
 					System.out.println("You open the chest to reveal a full bottle with a label that says 'Health potion, will heal 25 health'.");
 					System.out.println("You leave the room through a door on the other side of the room.");
 				}
+				setEnded(true);
 			}
 		});
 		
@@ -32,10 +34,12 @@ public class TreasureEvent extends Event {
 				if (randomChance <= 0.15) {
 					System.out.println("Just before you leave the room, you hear the chest move and growl. You made a good choice leaving the chest alone.");
 				} else if (randomChance <= 50) {
-					System.out.println("Just before you leave the room, another person enters through the door you came from and opens the chest. They take out a wand and immediately teleport away. Weird.");
+					System.out.println("Just before you leave the room, another person enters through the door you came from and opens the chest."
+							+ "They take out a wand and immediately teleport away. Weird.");
 				} else {
 					System.out.println("You regretfully leave the room and the chest inside it.");
 				}
+				setEnded(true);
 			}
 		});
 	}

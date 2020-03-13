@@ -7,27 +7,13 @@ import core.Game;
 public class Event {
 	
 	private final ArrayList<Choice> choices = new ArrayList<>();
+	
 	private Game game;
 	private String name;
 	private String description;
-	private int healthLost;
 	private String choiceResult;
-	
-	public int getHealthLost() {
-		return healthLost;
-	}
-
-	public void setHealthLost(int healthLost) {
-		this.healthLost = healthLost;
-	}
-
-	public String getChoiceResult() {
-		return choiceResult;
-	}
-
-	public void setChoiceResult(String choiceResult) {
-		this.choiceResult = choiceResult;
-	}
+	private int healthLost;
+	private boolean ended = false;
 
 	// General constructor
 	public Event(Game game, String name, String description) {
@@ -122,5 +108,29 @@ public class Event {
 	
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public String getChoiceResult() {
+		return choiceResult;
+	}
+
+	public void setChoiceResult(String choiceResult) {
+		this.choiceResult = choiceResult;
+	}
+	
+	public int getHealthLost() {
+		return healthLost;
+	}
+
+	public void setHealthLost(int healthLost) {
+		this.healthLost = healthLost;
+	}
+	
+	public boolean isEnded() {
+		return ended;
+	}
+
+	public void setEnded(boolean ended) {
+		this.ended = ended;
 	}
 }

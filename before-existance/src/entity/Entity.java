@@ -12,6 +12,8 @@ public abstract class Entity {
 	private int healthCap;
 	private HealthBar healthBar;
 	private Weapon currentWeapon;
+	private int mana;
+	private int manaCap;
 	
 	public Entity(String name, int healthCap) {
 		this.name = name;
@@ -122,5 +124,21 @@ public abstract class Entity {
 	
 	public void setCurrentWeapon(Weapon currentWeapon) {
 		this.currentWeapon = currentWeapon;
+	}
+
+	public int getMana() {
+		return mana;
+	}
+
+	public void setMana(int mana) {
+		this.mana = mana;
+	}
+
+	public int getManaCap() {
+		return manaCap;
+	}
+
+	public void setManaCap(int manaCap) {
+		this.manaCap = manaCap;
 	}
 }

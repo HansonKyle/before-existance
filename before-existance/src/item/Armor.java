@@ -1,5 +1,7 @@
 package item;
 
+import entity.Player;
+
 public class Armor extends Item {
 	
 	private int healthIncrease;
@@ -16,10 +18,10 @@ public class Armor extends Item {
 	public void setHealthIncrease(int healthIncrease) {
 		this.healthIncrease = healthIncrease;
 	}
-
-	@Override
-	public void use() {
-		// TODO Auto-generated method stub
-		
+	public void equip(Player player) {
+		player.setHealthCap(player.getHealthCap() + healthIncrease);
+	}
+	public void unequip(Player player) {
+		player.setHealthCap(player.getHealthCap() - healthIncrease);
 	}
 }

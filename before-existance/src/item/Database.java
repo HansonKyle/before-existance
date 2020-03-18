@@ -37,4 +37,17 @@ public class Database {
 	
 	// Bosses
 	public static final Enemy SQUIRREL_QUEEN = new Enemy("Squirrel Queen", 125, Database.ACORN_STAFF);
+
+	// Spells
+	public static final DamageSpell SPARK = new DamageSpell("Spark", 5, 10);
+	public static final DamageSpell FIREBALL = new DamageSpell("Fireball", 15, 25);
+	public static final DamageSpell SMITE = new DamageSpell("Smite", 30, 65);
+	public static final HealSpell CURE_WOUNDS = new HealSpell("Cure Wounds", 5, 15);
+	public static final HealSpell LAYONHANDS = new HealSpell("Lay on Hands", 25, 65);
+	public static final HealSpell BOTASG = new HealSpell("Blessing of the Ancient Squirrel Gods", 30, 100);
+
+	// Armor
+	public static final Armor LEATHER_ARMOR = new Armor("Leather armor", 15);
+	public static final Armor IRON_ARMOR = new Armor("Iron armor", 25);
+	public static final Armor PLATE_ARMOR = new Armor("Heavy Plate Armor", 50);
 }

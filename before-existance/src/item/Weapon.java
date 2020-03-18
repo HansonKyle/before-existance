@@ -29,9 +29,4 @@ public class Weapon extends Item{
 		String str = this.getName() + " : " + String.valueOf(damage);
 		return str;
 	}
-	@Override
-	public void use() {
-		// TODO Auto-generated method stub
-		
-	}
 }

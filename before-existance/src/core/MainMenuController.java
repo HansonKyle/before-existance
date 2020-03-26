@@ -21,6 +21,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
@@ -36,6 +37,9 @@ public class MainMenuController {
 	private Story story = new Story(game, maxEvents);
 	private int eventIndex = 0;
 	private char eventChoice = 0;
+	
+	@FXML
+	private SplitPane statsPane;
 	
 	@FXML
 	private Button submitButton;
@@ -202,6 +206,7 @@ public class MainMenuController {
 			}
 			loadEventButton.setText("Load next event");
 			loadEventButton.setVisible(false);
+			statsPane.setVisible(true);
 			nameTextBox.setVisible(false);
 			statsGridPane.setVisible(true);
 			playerNameLabel.setVisible(true);
@@ -222,6 +227,7 @@ public class MainMenuController {
 				fade.play();
 				youDiedImage.setVisible(true);
 				deadButton.setVisible(true);
+				submitButton.setVisible(false);
 				eventDescriptionLabel.setVisible(false);
 			} else {
 				player.dungeonSurvived();

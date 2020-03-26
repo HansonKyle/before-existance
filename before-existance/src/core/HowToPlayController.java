@@ -27,6 +27,5 @@ public class HowToPlayController {
 		
 		window.setScene(howToPlayScene);
 		window.show();	
-		}
-	
+	}
 }

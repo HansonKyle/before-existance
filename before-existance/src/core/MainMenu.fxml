@@ -16,6 +16,7 @@
           </font>
         </Label>
         <Button fx:id="startButton" mnemonicParsing="false" onAction="#startButtonClicked" prefHeight="25.0" prefWidth="142.0" text="Start Game" />
+        <Button id="startButton" fx:id="howToPlayButton" mnemonicParsing="false" onAction="#howToPlayButtonPressed" prefHeight="25.0" prefWidth="142.0" text="How to Play" />
         <Button fx:id="quitButton" mnemonicParsing="false" onAction="#quitButtonClicked" prefHeight="25.0" prefWidth="118.0" text="Quit" />
       </children>
     </VBox>

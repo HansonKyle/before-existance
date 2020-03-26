@@ -22,7 +22,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.SplitPane;
-import javafx.scene.control.SplitPane.Divider;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
@@ -197,9 +196,9 @@ public class MainMenuController {
 		if (player.getName().equals("Default")) {
 			nameErrorLabel.setVisible(true);
 		} else {
-			if (nameErrorLabel.isVisible() == true) {
+			if (nameErrorLabel.isVisible()) {
 				nameErrorLabel.setVisible(false);
-				if(player.getName().equals("FORTNITE")) {
+				if (player.getName().equals("FORTNITE")) {
 					playSprite();
 				}
 			}
@@ -216,7 +215,11 @@ public class MainMenuController {
 			updatePlayerStats();
 			eventDescriptionLabel.setVisible(true);
 			eventResultLabel.setVisible(false);
-			if (player.isAlive() == false) {
+			
+			if (player.isAlive()) {
+				player.dungeonSurvived();
+				displayNextEvent(event);
+			} else {
 				FadeTransition fade = new FadeTransition();
 				fade.setDuration(Duration.millis(5000));
 				fade.setFromValue(0);
@@ -228,9 +231,6 @@ public class MainMenuController {
 				deadButton.setVisible(true);
 				submitButton.setVisible(false);
 				eventDescriptionLabel.setVisible(false);
-			} else {
-				player.dungeonSurvived();
-				displayNextEvent(event);
 			}
 		}
 	}

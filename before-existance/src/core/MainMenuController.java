@@ -204,6 +204,7 @@ public class MainMenuController {
 					playSprite();
 				}
 			}
+			statsPane.maxWidthProperty().bind(statsPane.widthProperty());
 			loadEventButton.setText("Load next event");
 			loadEventButton.setVisible(false);
 			statsPane.setVisible(true);

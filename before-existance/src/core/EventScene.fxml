@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="core.MainMenuController">
+  <bottom>
+    <AnchorPane prefHeight="250.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <children>
+        <VBox layoutX="25.0" layoutY="35.0" prefHeight="181.0" prefWidth="550.0" spacing="30.0">
+          <children>
+            <RadioButton fx:id="choice1Button" disable="false" mnemonicParsing="false" onAction="#choice1ButtonClicked" text="Choice 1 Text" visible="false" />
+            <RadioButton fx:id="choice2Button" disable="false" mnemonicParsing="false" onAction="#choice2ButtonClicked" text="Choice 2 Text" visible="false" />
+            <RadioButton fx:id="choice3Button" disable="false" mnemonicParsing="false" onAction="#choice3ButtonClicked" text="Choice 3 Text" visible="false" />
+            <Button fx:id="submitButton" mnemonicParsing="false" onAction="#submitButtonClicked" text="Submit" visible="false" />
+          </children>
+        </VBox>
+      </children>
+    </AnchorPane>
+  </bottom>
+  <center>
+    <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <children>
+        <Label fx:id="eventDescriptionLabel" layoutX="28.0" layoutY="29.0" text="Event Description Label" visible="false" />
+        <Button fx:id="loadEventButton" layoutX="273.0" layoutY="248.0" mnemonicParsing="false" onAction="#loadEvent" text="Submit" />
+        <TextField fx:id="nameTextBox" layoutX="226.0" layoutY="201.0" onAction="#nameTextBoxEdit" promptText="Enter your name" />
+        <Label fx:id="nameErrorLabel" layoutX="238.0" layoutY="291.0" text="Please enter your name" visible="false" />
+        <Label fx:id="eventResultLabel" layoutX="28.0" layoutY="151.0" text="Event Result" visible="false" />
+        <ImageView fx:id="youDiedImage" fitHeight="150.0" fitWidth="600.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true" visible="false">
+          <image>
+            <Image url="@darkSoulsYouDied.png" />
+          </image>
+        </ImageView>
+        <Button fx:id="deadButton" layoutX="242.0" layoutY="279.0" mnemonicParsing="false" onAction="#quitToMainMenu" text="Quit to Main Menu" visible="false" />
+      </children>
+    </AnchorPane>
+  </center>
+  <top>
+    <SplitPane dividerPositions="0.2976588628762542" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <children>
+            <GridPane fx:id="statsGridPane" gridLinesVisible="true" layoutX="8.0" layoutY="22.0" prefHeight="114.0" prefWidth="293.0" visible="false">
+              <children>
+                <Label text=" Name">
+                  <font>
+                    <Font size="14.0" fx:id="x1" />
+                  </font>
+                </Label>
+                <Label font="$x1" text=" Health" GridPane.rowIndex="1" />
+                <Label font="$x1" text=" Weapon (Damage)" GridPane.rowIndex="2" />
+                <Label font="$x1" text=" Room Count" GridPane.rowIndex="3" />
+                <Label fx:id="playerNameLabel" font="$x1" text=" playerName" textFill="RED" GridPane.columnIndex="1" />
+                <Label fx:id="playerHealthLabel" font="$x1" text=" playerHealth" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label fx:id="currentWeaponLabel" font="$x1" text=" currentWeapon" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label fx:id="roomCountLabel" font="$x1" text=" roomCount" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="125.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="156.0" minWidth="10.0" prefWidth="125.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </top>
+</BorderPane>

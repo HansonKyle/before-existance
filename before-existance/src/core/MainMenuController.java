@@ -22,6 +22,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.SplitPane;
+import javafx.scene.control.SplitPane.Divider;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
@@ -202,7 +203,6 @@ public class MainMenuController {
 					playSprite();
 				}
 			}
-			statsPane.maxWidthProperty().bind(statsPane.widthProperty());
 			loadEventButton.setText("Load next event");
 			loadEventButton.setVisible(false);
 			statsPane.setVisible(true);

@@ -14,18 +14,15 @@ public class HowToPlayController {
 
 	@FXML
 	private Button returnToMainButton;
-
+	
 	@FXML
-	//This method will change the scene to the How To Play scene when called
-	public void howToPlayButtonPressed (ActionEvent event) throws IOException {	
-		Parent howToPlayParent = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
-		Scene howToPlayScene = new Scene(howToPlayParent);
-		
-		//This line gets stage info
-		Stage window = (Stage)(((Node)event.getSource()).getScene().getWindow());
-		howToPlayScene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-		
-		window.setScene(howToPlayScene);
-		window.show();	
+	void quitToMainMenu(ActionEvent event) throws IOException {
+		// Switches screen to main menu after death
+		Parent eventSceneParent = FXMLLoader.load(getClass().getClassLoader().getResource("core/MainMenu.fxml"));
+		Scene eventScene = new Scene(eventSceneParent);
+		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+		eventScene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+		window.setScene(eventScene);
+		window.show();
 	}
 }

@@ -29,26 +29,18 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class MainMenuController {
+	
+	private static final int MAX_EVENTS = 5;
 
 	private Game game = new Game();
 	private Weapon defaultWeapon = new Weapon("Hands", 10);
 	private Player player = new Player("Default", 100, defaultWeapon);
-	private int maxEvents = 5;
-	private Story story = new Story(game, maxEvents);
+	private Story story = new Story(game, MAX_EVENTS);
 	private int eventIndex = 0;
 	private char eventChoice = 0;
-	
-	@FXML
-	private SplitPane statsPane;
-	
-	@FXML
-	private Button submitButton;
 
 	@FXML
 	private Button playButton;
-	
-	@FXML
-	private Button howToPlayButton;
 	
 	@FXML
 	private Button quitButton;
@@ -61,6 +53,12 @@ public class MainMenuController {
 	
 	@FXML
 	private RadioButton choice3Button;
+	
+	@FXML
+	private Button submitButton;
+	
+	@FXML
+	private SplitPane statsPane;
 
 	@FXML
 	private Label currentWeaponLabel;

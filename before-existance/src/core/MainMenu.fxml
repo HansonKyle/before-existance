@@ -6,11 +6,11 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="core.MainMenuController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="core.MainMenuController">
   <top>
-    <VBox prefHeight="800.0" prefWidth="600.0" spacing="20.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+    <VBox alignment="CENTER" prefHeight="800.0" prefWidth="600.0" spacing="20.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
       <children>
-        <Label prefHeight="75.0" prefWidth="199.0" text="Decisions..." textFill="WHITE">
+        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="199.0" text="Decisions..." textFill="WHITE">
           <font>
             <Font name="Cambria Bold" size="18.0" />
           </font>

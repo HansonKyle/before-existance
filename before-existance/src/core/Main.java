@@ -15,9 +15,10 @@ public class Main extends Application {
 			BorderPane root = new BorderPane();
 			FXMLLoader loader = new FXMLLoader();
 			root = (BorderPane)loader.load(new FileInputStream("src/core/MainMenu.fxml"));
-			Scene scene = new Scene(root,400,400);
+			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
+			primaryStage.centerOnScreen();
 			primaryStage.setResizable(false);
 			primaryStage.show();
 		} catch(Exception e) {

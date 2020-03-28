@@ -12,11 +12,11 @@ public class Player extends Entity {
 	private ArrayList<Spell> spellbook = new ArrayList<Spell>();
 	
 	private int dungeonsSurvived = 0;
-
+	//Constructor
 	public Player(String name, int healthCap, Weapon weapon) {
 		super(name, healthCap, weapon);
 	}
-	
+	//Copy Constructor
 	public Player(String name, int healthCap) {
 		super(name, healthCap);
 	}
@@ -33,7 +33,7 @@ public class Player extends Entity {
 	public String toString() {
 		return super.toString() + " Dungeons survived: " + dungeonsSurvived + " |";
 	}
-	
+// Inventory management methods	
 	public void addItem(Item i) {
 		inventory.add(i);
 	}
@@ -53,7 +53,7 @@ public class Player extends Entity {
 	public ArrayList<Spell> getSpellbook() {
 		return spellbook;
 	}
-	
+// Dungeon counter methods	
 	public int getDungeonsSurvived() {
 		return dungeonsSurvived;
 	}

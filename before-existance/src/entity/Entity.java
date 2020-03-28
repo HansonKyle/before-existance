@@ -9,14 +9,14 @@ public abstract class Entity {
 	private int healthCap;
 	private HealthBar healthBar;
 	private Weapon currentWeapon;
-	
+	//Constructor
 	public Entity(String name, int healthCap) {
 		this.name = name;
 		this.healthBar = new HealthBar(this);
 		this.healthCap = healthCap;
 		this.health = healthCap;
 	}
-	
+	//Copy Constructor
 	public Entity(String name, int healthCap,  Weapon currentWeapon) {
 		this(name, healthCap);
 		this.currentWeapon = currentWeapon;
@@ -28,23 +28,15 @@ public abstract class Entity {
 	public String toString() {
 		return "| Name: " + name.toUpperCase() + " | " + healthBar.toString() + " |";
 	}
-	
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-	
+//Health related methods
 	public boolean isAlive() {
 		return health > 0;
 	}
-	
+	// Sets health to max value
 	public void replenishHealth() {
 		this.health = healthCap;
 	}
-	
+	// Adds health points to current total
 	public void addHealth(int amount) {
 		if (amount > 0) {
 			health += amount;
@@ -53,7 +45,7 @@ public abstract class Entity {
 			}
 		}
 	}
-	
+	// Subtracts health points from current value
 	public void removeHealth(int amount) {
 		if (amount > 0) {
 			health -= amount;
@@ -63,7 +55,7 @@ public abstract class Entity {
 			}
 		}
 	}
-	
+// Getters and Setters
 	public int getHealth() {
 		return health;
 	}
@@ -97,5 +89,12 @@ public abstract class Entity {
 	
 	public void setCurrentWeapon(Weapon currentWeapon) {
 		this.currentWeapon = currentWeapon;
+	}
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 }

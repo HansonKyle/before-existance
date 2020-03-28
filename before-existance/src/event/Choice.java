@@ -25,7 +25,7 @@ public abstract class Choice {
 	public String toString() {
 		return keyBinding + ". " + description;
 	}
-	
+// Setters and getters	
 	public char getKeyBinding() {
 		return keyBinding;
 	}

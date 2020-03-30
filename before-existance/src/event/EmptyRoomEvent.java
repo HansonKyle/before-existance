@@ -2,8 +2,9 @@ package event;
 
 import core.Game;
 
-// Event: Empty room
-// Creates an event with 1 choice
+/*
+ * Creates and presents an event of the player entering an empty room, proceeds to the next event with the player's choice.
+ */
 public class EmptyRoomEvent extends Event {
 
 	public EmptyRoomEvent(Game game) {

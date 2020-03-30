@@ -12,6 +12,7 @@ public abstract class Entity {
 	private HealthBar healthBar;
 	private Weapon currentWeapon;
 	
+	// General Constructor
 	public Entity(String name, int healthCap) {
 		this.name = name;
 		this.healthBar = new HealthBar(this);
@@ -19,6 +20,7 @@ public abstract class Entity {
 		this.health = healthCap;
 	}
 	
+	// Copy Constructor
 	public Entity(String name, int healthCap,  Weapon currentWeapon) {
 		this(name, healthCap);
 		this.currentWeapon = currentWeapon;
@@ -31,24 +33,21 @@ public abstract class Entity {
 		return "| Name: " + name.toUpperCase() + " | " + healthBar.toString() + " |";
 	}
 	
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
+	//Health related methods
 	
 	public boolean isAlive() {
 		return health > 0;
 	}
 	
+	/**
+	 * Sets health to max value
+	 */
 	public void replenishHealth() {
 		this.health = healthCap;
 	}
 	
 	/**
-	 * Increments entity health by a given amount
+	 * Adds health points to current total
 	 * 
 	 * @param amount
 	 */
@@ -62,7 +61,7 @@ public abstract class Entity {
 	}
 	
 	/**
-	 * Decrements entity health by a given amount
+	 * Subtracts health points from current value
 	 * 
 	 * @param amount
 	 */
@@ -76,10 +75,6 @@ public abstract class Entity {
 			}
 		}
 	}
-	
-	public int getHealth() {
-		return health;
-	}
 
 	public void setHealth(int health) {
 		if (health >= 0) {
@@ -91,20 +86,26 @@ public abstract class Entity {
 			}
 		}
 	}
-
-	public int getHealthCap() {
-		return healthCap;
-	}
-
+	
 	public void setHealthCap(int healthCap) {
 		if (healthCap > 0) {
 			this.healthCap = healthCap;
 		}
 	}
 	
+	public int getHealth() {
+		return health;
+	}
+
+	public int getHealthCap() {
+		return healthCap;
+	}
+	
 	public HealthBar getHealthBar() {
 		return healthBar;
 	}
+	
+	// Getters and Setters
 	
 	public Weapon getCurrentWeapon() {
 		return currentWeapon;
@@ -112,5 +113,13 @@ public abstract class Entity {
 	
 	public void setCurrentWeapon(Weapon currentWeapon) {
 		this.currentWeapon = currentWeapon;
+	}
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 }

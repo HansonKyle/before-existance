@@ -345,6 +345,9 @@ public class EventController {
 		}
 	}
 	
+	/**
+	 * Plays an animation in the icon at the top left corner of the screen
+	 */
 	private void playSprite() {
 		int xOffset = 8;
 		int yOffset = 0;

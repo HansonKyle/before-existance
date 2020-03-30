@@ -1,6 +1,6 @@
 package core;
 	
-import java.io.FileInputStream;
+import java.io.FileInputStream; 
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -9,17 +9,19 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 
 public class Main extends Application {
+	
+	/**
+	 * Launches the application and displays the menu scene to the screen
+	 */
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			BorderPane root = new BorderPane();
-			FXMLLoader loader = new FXMLLoader();
-			root = (BorderPane)loader.load(new FileInputStream("src/core/MainMenu.fxml"));
+			BorderPane root = (BorderPane) new FXMLLoader().load(new FileInputStream("src/core/MainMenu.fxml"));
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
-			primaryStage.centerOnScreen();
 			primaryStage.setResizable(false);
+			primaryStage.centerOnScreen();
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();

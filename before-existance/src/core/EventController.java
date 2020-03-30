@@ -29,7 +29,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 /*
- * Handles user interaction with the buttons in the event scene
+ * Handles user interaction with the GUI in the event scene
  */
 public class EventController {
 	

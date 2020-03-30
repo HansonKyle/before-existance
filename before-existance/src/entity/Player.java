@@ -8,7 +8,9 @@ import item.Weapon;
 
 public class Player extends Entity {
 	
+	// Holds all items that have been collected
 	private ArrayList<Item> inventory = new ArrayList<Item>();
+	// Hold all spells that have been unlocked
 	private ArrayList<Spell> spellbook = new ArrayList<Spell>();
 	
 	private int dungeonsSurvived = 0;
@@ -21,6 +23,9 @@ public class Player extends Entity {
 		super(name, healthCap);
 	}
 	
+	/**
+	 * Print death screen in console
+	 */
 	@Override
 	public void die() {
 		System.out.println("\n----------------------------------");
@@ -54,6 +59,10 @@ public class Player extends Entity {
 		return spellbook;
 	}
 	
+	public void dungeonSurvived() {
+		dungeonsSurvived++;
+	}
+	
 	public int getDungeonsSurvived() {
 		return dungeonsSurvived;
 	}
@@ -62,9 +71,5 @@ public class Player extends Entity {
 		if (dungeonsSurvived >= 0) {
 			this.dungeonsSurvived = dungeonsSurvived;
 		}
-	}
-	
-	public void dungeonSurvived() {
-		dungeonsSurvived++;
 	}
 }

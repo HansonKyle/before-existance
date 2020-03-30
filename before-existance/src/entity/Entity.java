@@ -1,7 +1,9 @@
 package entity;
 import item.Weapon;
 
-// Represents a character in game that can be damaged and is prone to dying
+/*
+ * Represents a character in game that can be damaged and is prone to dying
+ */
 public abstract class Entity {
 	
 	private String name;
@@ -45,6 +47,11 @@ public abstract class Entity {
 		this.health = healthCap;
 	}
 	
+	/**
+	 * Increments entity health by a given amount
+	 * 
+	 * @param amount
+	 */
 	public void addHealth(int amount) {
 		if (amount > 0) {
 			health += amount;
@@ -54,10 +61,16 @@ public abstract class Entity {
 		}
 	}
 	
+	/**
+	 * Decrements entity health by a given amount
+	 * 
+	 * @param amount
+	 */
 	public void removeHealth(int amount) {
 		if (amount > 0) {
 			health -= amount;
-			if (health < 0) {
+			// If the new health is <= 0 then kill entity
+			if (health <= 0) {
 				health = 0;
 				die();
 			}
@@ -71,7 +84,9 @@ public abstract class Entity {
 	public void setHealth(int health) {
 		if (health >= 0) {
 			this.health = health;
-			if (health == 0) {
+			// If the new health is <= 0 then kill entity
+			if (health <= 0) {
+				health = 0;
 				die();
 			}
 		}

@@ -1,6 +1,8 @@
 package entity;
 
-// Sets up a battle scenario between two entities
+/*
+ * Sets up a battle scenario between two entities
+ */
 public class Attack {
 	
 	// Two entities one being the target of the attack and one being the attacker or source of damage

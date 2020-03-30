@@ -4,17 +4,15 @@ import core.Game;
 import event.Event;
 import event.EventGenerator;
 
-// Story class stores events in an array and prints events for player to read and respond to.
+/*
+ * This class stores game events in an array and prints events for player to read and respond to.
+ */
 public class Story {
 
+	private final Event[] events;
 	private final EventGenerator eventGenerator;
-	
-	private Event[] events;
-
-	private Game game;
 
 	public Story(Game game, int numEvents) { // Generates list of events using eventGenerator class
-		this.game = game;
 		this.events = new Event[numEvents];
 		this.eventGenerator = new EventGenerator(game);
 		

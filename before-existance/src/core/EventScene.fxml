@@ -6,16 +6,16 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="core.MainMenuController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="core.EventController">
   <bottom>
     <AnchorPane prefHeight="250.0" prefWidth="600.0" BorderPane.alignment="CENTER">
       <children>
-        <VBox layoutX="25.0" layoutY="35.0" prefHeight="181.0" prefWidth="550.0" spacing="30.0">
+        <VBox layoutX="25.0" layoutY="35.0" prefHeight="201.0" prefWidth="550.0" spacing="30.0">
           <children>
             <RadioButton fx:id="choice1Button" disable="false" mnemonicParsing="false" onAction="#choice1ButtonClicked" text="Choice 1 Text" textFill="WHITE" visible="false" />
             <RadioButton fx:id="choice2Button" disable="false" mnemonicParsing="false" onAction="#choice2ButtonClicked" text="Choice 2 Text" textFill="WHITE" visible="false" />
             <RadioButton fx:id="choice3Button" disable="false" mnemonicParsing="false" onAction="#choice3ButtonClicked" text="Choice 3 Text" textFill="WHITE" visible="false" />
-            <Button fx:id="submitButton" mnemonicParsing="false" onAction="#submitButtonClicked" text="Submit" visible="false" />
+            <Button id="submitButton" fx:id="selectChoiceButton" mnemonicParsing="false" onAction="#selectChoiceButtonClicked" text="Select Choice" visible="false" />
           </children>
         </VBox>
       </children>
@@ -25,8 +25,8 @@
     <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
       <children>
         <Label fx:id="eventDescriptionLabel" layoutX="28.0" layoutY="29.0" text="Event Description Label" textFill="WHITE" visible="false" />
-        <Button fx:id="loadEventButton" layoutX="273.0" layoutY="248.0" mnemonicParsing="false" onAction="#loadEvent" text="Submit" />
-        <TextField fx:id="nameTextBox" layoutX="226.0" layoutY="201.0" onAction="#nameTextBoxEdit" promptText="Enter your name" />
+        <Button fx:id="loadEventButton" layoutX="271.0" layoutY="248.0" mnemonicParsing="false" onAction="#loadEvent" text="Submit" />
+        <TextField fx:id="nameTextBox" layoutX="228.0" layoutY="201.0" onAction="#nameTextBoxEdit" promptText="Enter your name" />
         <Label fx:id="nameErrorLabel" layoutX="238.0" layoutY="291.0" text="Please enter your name" textFill="WHITE" visible="false" />
         <Label fx:id="eventResultLabel" layoutX="28.0" layoutY="151.0" text="Event Result" textFill="WHITE" visible="false" />
         <ImageView fx:id="youDiedImage" fitHeight="150.0" fitWidth="600.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true" visible="false">
@@ -34,7 +34,7 @@
             <Image url="@darkSoulsYouDied.png" />
           </image>
         </ImageView>
-        <Button fx:id="deadButton" layoutX="242.0" layoutY="279.0" mnemonicParsing="false" onAction="#quitToMainMenu" text="Quit to Main Menu" visible="false" />
+        <Button fx:id="deadButton" layoutX="240.0" layoutY="279.0" mnemonicParsing="false" onAction="#quitToMainMenu" text="Quit to Main Menu" visible="false" />
       </children>
     </AnchorPane>
   </center>

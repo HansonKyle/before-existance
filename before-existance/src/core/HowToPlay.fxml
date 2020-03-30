@@ -26,6 +26,6 @@
         <Font size="23.0" />
       </font>
     </Text>
-    <Button fx:id="returnToMainButton" layoutX="350.0" layoutY="465.0" mnemonicParsing="false" onAction="#quitToMainMenu" text="Return To Main Menu" />
+    <Button id="returnToMainButton" fx:id="quitToMenuButton" layoutX="350.0" layoutY="465.0" mnemonicParsing="false" onAction="#quitToMenuButtonClicked" text="Return To Main Menu" />
   </children>
 </AnchorPane>

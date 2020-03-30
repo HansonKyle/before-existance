@@ -5,24 +5,30 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
+/*
+ * Handles user interaction with the buttons in the how to play scene
+ */
 public class HowToPlayController {
 
 	@FXML
-	private Button returnToMainButton;
+	private Button quitToMenuButton;
 	
+	/**
+	 * Switches screen to the main menu
+	 * 
+	 * @param event
+	 * @throws IOException
+	 */
 	@FXML
-	void quitToMainMenu(ActionEvent event) throws IOException {
-		// Switches screen to main menu after death
-		Parent eventSceneParent = FXMLLoader.load(getClass().getClassLoader().getResource("core/MainMenu.fxml"));
-		Scene eventScene = new Scene(eventSceneParent);
-		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+	void quitToMenuButtonClicked(ActionEvent event) throws IOException {
+		Scene eventScene = new Scene(FXMLLoader.load(getClass().getResource("MainMenu.fxml")));
+		Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+		
 		eventScene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-		window.setScene(eventScene);
-		window.show();
+		stage.setScene(eventScene);
 	}
 }

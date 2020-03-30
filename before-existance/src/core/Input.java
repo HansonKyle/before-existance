@@ -3,7 +3,7 @@ package core;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-// Contains methods for retrieving user input with validation and error handling
+// Contains methods for retrieving user input with validation and exception handling
 public class Input {
 	
 	private final Scanner scanner = new Scanner(System.in);

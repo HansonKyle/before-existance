@@ -7,7 +7,7 @@ The player is given a series of choices for each event they encounter.
 Only with the correct mindset and a bit of luck will you be able to survive the dungeon and move onto the next!
 
 In the master branch, the game is purely console-driven.
-GUI versions are live on branches kyle-2.29 and other new branches
+Latest GUI version of game can be found in the anil-3.3 branch.
 
 # Setup:
 1. Import a branch into an IDE as a Java project

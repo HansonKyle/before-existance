@@ -25,9 +25,9 @@
     <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
       <children>
         <Label fx:id="eventDescriptionLabel" layoutX="28.0" layoutY="29.0" text="Event Description Label" textFill="WHITE" visible="false" />
-        <Button fx:id="loadEventButton" layoutX="271.0" layoutY="248.0" mnemonicParsing="false" onAction="#loadEvent" text="Submit" />
-        <TextField fx:id="nameTextBox" layoutX="228.0" layoutY="201.0" onAction="#nameTextBoxEdit" promptText="Enter your name" />
-        <Label fx:id="nameErrorLabel" layoutX="238.0" layoutY="291.0" text="Please enter your name" textFill="WHITE" visible="false" />
+        <Button fx:id="loadEventButton" layoutX="271.0" layoutY="296.0" mnemonicParsing="false" onAction="#loadEvent" text="Submit" />
+        <TextField fx:id="nameTextBox" layoutX="228.0" layoutY="173.0" onAction="#nameTextBoxEdit" promptText="Enter your name" />
+        <Label fx:id="nameErrorLabel" layoutX="238.0" layoutY="206.0" text="Please enter your name" textFill="WHITE" visible="false" />
         <Label fx:id="eventResultLabel" layoutX="28.0" layoutY="151.0" text="Event Result" textFill="WHITE" visible="false" />
         <ImageView fx:id="youDiedImage" fitHeight="150.0" fitWidth="600.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true" visible="false">
           <image>

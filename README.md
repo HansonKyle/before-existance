@@ -18,3 +18,9 @@ Iteration-3-Final: Same as iteration 2 with bug fixes and more documentation
 # Setup:
 1. Import a branch into an IDE as a Java project
 3. Run core/Main.java after checkout
+
+# Presenters:
+| | Name(s) |
+|-----------|------|
+|1|Brendan|
+|2|Alex|

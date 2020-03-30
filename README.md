@@ -6,6 +6,7 @@ A text-based adventure game with randomly generated events and puzzles.
 The player is given a series of choices for each event they encounter.
 Only with the correct mindset and a bit of luck will you be able to survive the dungeon and move onto the next!
 
+# Versions:
 Latest GUI version of the game can be found in the Iteration-3-Final branch.
 
 Iteration-1-Final: Console version of the game only

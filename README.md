@@ -20,7 +20,9 @@ Iteration-3-Final: Same as iteration 2 with bug fixes and more documentation
 3. Run core/Main.java after checkout
 
 # Presenters:
-| Name(s) |
-|------|
+
+# Presenters:
+| | Name(s) |
+|-----------|------|
 |1|Kyle|
 |2|Harprabh|

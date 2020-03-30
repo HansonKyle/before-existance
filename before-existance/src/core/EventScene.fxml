@@ -44,7 +44,7 @@
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
           <children>
-            <GridPane fx:id="statsGridPane" gridLinesVisible="true" layoutX="8.0" layoutY="22.0" prefHeight="114.0" prefWidth="293.0" visible="false">
+            <GridPane fx:id="statsGridPane" alignment="TOP_LEFT" gridLinesVisible="false" layoutX="8.0" layoutY="22.0" opacity="1.0" prefHeight="114.0" prefWidth="293.0" style="-fx-border-color: white;" visible="false">
               <children>
                 <Label text=" Name" textFill="WHITE">
                   <font>

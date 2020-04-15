@@ -4,49 +4,43 @@ import core.Game;
 import event.Event;
 import event.EventGenerator;
 
+/*
+ * This class stores game events in an array for player to read and respond to
+ * Events are randomly generated and placed in the array using the EventGenerator class
+ */
 public class Story {
 
+	private final Event[] events;
 	private final EventGenerator eventGenerator;
-	
-	private Game game;
-	private Event[] events;
 
+	// General constructor
 	public Story(Game game, int numEvents) {
-		this.game = game;
 		this.events = new Event[numEvents];
 		this.eventGenerator = new EventGenerator(game);
 		
+		// Generates list of events using eventGenerator class
 		for (int i = 0; i < events.length; i++) {
 			events[i] = eventGenerator.generateUniqueEvent();
 		}
 	}
-
-	public void start() {
-		if (game.getPlayer() == null) {
-			game.initPlayer();
-		}
-		
-		int i = 0;
-		while (i < events.length && game.getPlayer().isAlive()) {
-			System.out.println(events[i].getDescription());
-			events[i].displayChoices();
-			events[i].requestChoice();
-			System.out.println();
-			i++;
-		}
-		if (game.getPlayer().isAlive()) {
-			game.getPlayer().dungeonSurvived();
-			System.out.println("----------------------------------");
-			System.out.println("You have completed this dungeon. Congratulations!");
-			System.out.println("Current Stats: " + game.getPlayer());
-			System.out.println("----------------------------------\n");
-		} else {
-			System.out.println("----------------------------------");
-			System.out.println("Game over.");
-			System.out.println("----------------------------------\n");
-			game.setPlayer(null);
-		}
-		game.displayMenu();
+	
+	/**
+	 * Gets the number of events in the story
+	 * 
+	 * @return number of events
+	 */
+	public int length() {
+		return events.length;
+	}
+	
+	/**
+	 * Gets a specific event from the story
+	 * 
+	 * @param i the event index
+	 * @return the event at the corresponding index
+	 */
+	public Event getEvent(int i) {
+		return events[i];
 	}
 
 	@Override

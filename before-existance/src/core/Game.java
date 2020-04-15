@@ -1,19 +1,18 @@
 package core;
 
 import entity.Player;
-import event.Menu;
 
+/*
+ * Initializes the player and user input classes
+ */
 public class Game {
 	
 	private final Input input = new Input();
-	private final Menu menu;
 	private Player player;
-
-	public Game() {
-		menu = new Menu(this);
-		displayMenu();
-	}
 	
+	/**
+	 * Initializes the player by asking the user to input their name in the console
+	 */
 	public void initPlayer() {
 		System.out.println("----------------------------------");
 		System.out.println("Please enter your name: ");
@@ -22,13 +21,6 @@ public class Game {
 		this.player = new Player(playerName, 100, null);
 		
 		System.out.println();
-	}
-	
-	public void displayMenu() {
-		System.out.println("| DUNGEON CRAWLER |");
-		System.out.println(menu);
-		menu.displayChoices();
-		menu.requestChoice();
 	}
 	
 	public void close() {

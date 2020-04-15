@@ -1,7 +1,11 @@
 package entity;
+
+/*
+ * Sets up a battle scenario between two entities
+ */
 public class Attack {
 	
-	// Two entities one being the target of the attack and one being the attacker or source of damage
+	// Two entities one being the target of the attack and one being the attacker or source of damage.
 	private Entity target;
 	private Entity attacker;
 	
@@ -26,23 +30,23 @@ public class Attack {
 		this.attacker = attacker;
 	}
 	
+	/*
+	 * One of the entities does damage to the other depending on whose turn it is.
+	 * When an entity is finished dealing damage, the other entity will attack if they are still alive.
+	 */
 	public void attack(Entity attacker, Entity target) {
-		if (TurnBased.firstTurn() == true) {
+		if (TurnBased.firstTurn()) {
+			// Attacker gets to deal damage before the target
 			target.removeHealth(attacker.getCurrentWeapon().getDamage());
+			if (target.isAlive()) {
+				attacker.removeHealth(target.getCurrentWeapon().getDamage());
+			}
+		} else {
+			// Target gets to deal damage before the attacker
 			attacker.removeHealth(target.getCurrentWeapon().getDamage());
+			if (attacker.isAlive()) {
+				target.removeHealth(attacker.getCurrentWeapon().getDamage());
+			}
 		}
-		else {
-			attacker.removeHealth(target.getCurrentWeapon().getDamage());
-			target.removeHealth(attacker.getCurrentWeapon().getDamage());
-		}
-	}
-	
-	public boolean accuracyCheck(double chance) {	//Checks if the attacker misses or not, chance must be <= 1.0
-		boolean success = false;
-		double num = Math.random();
-		if (num <= chance) {
-			success = true;
-		}
-		return success;
 	}
 }

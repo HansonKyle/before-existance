@@ -1,34 +1,33 @@
 package item;
+
+/*
+ * Represents an item that can be equipped by the player
+ */
 public class Equippable extends Item {
 	
-	//Get name of the equippable
+	private Boolean equipState = false;
+	
+	// General constructor
 	public Equippable(String name) {
 		super(name);
 	}
 	
-	//Set the state of equipState to false
-	private Boolean equipState = false;
-	
-	//Set the equipeState to true
 	public void equipItem() {
 		equipState = true;
 	}
 	
-	//Set the equipeState to false
 	public void unequipItem() {
 		equipState = false;
 	}
 	
-	//Get the equipeState
+	/**
+	 * @return whether or not the item is equipped
+	 */
 	public Boolean getEquipState() {
 		return equipState;
 	}
 	
+	// Effects of using the item
 	@Override
-	public void use() {
-		//	Bring up a menu of options whether the player
-		//	would like to equip the item if it is not equipped and
-		//	unequip the item if it is equipped
-		equipState = true;
-	}
+	public void use() {}
 }

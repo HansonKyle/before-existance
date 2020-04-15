@@ -1,26 +1,52 @@
 package item;
-public class Weapon extends Equippable {
+
+/*
+ * Represents an item in the game that can be used to damage other entities
+ */
+public class Weapon extends Item {
 	
-	//Create a variable for damage
+	// The amount of health subtracted when weapon is used on another entity
 	private int damage;
-	
-	//Apply the name and damage
-	public Weapon(String name, int damage) {
+	private int chanceToHit;
+
+	// General constructor
+	public Weapon(String name, int damage, int chanceToHit) {
 		super(name);
-		this.damage = damage;
+		setDamage(damage);
+		setChanceToHit(chanceToHit);
 	}
 	
-	//Get the damage
+	// General constructor w/default change to hit
+	public Weapon(String name, int damage) {
+		super(name);
+		setDamage(damage);
+		setChanceToHit(90);
+	}
+	
+	// Get the damage
 	public int getDamage() {
 		return damage;
 	}
 	
-	//Set the damage
+	// Set the damage
 	public void setDamage(int damage) {
 		this.damage = damage;
 	}
 	
+	public int getChanceToHit() {
+		return chanceToHit;
+	}
 	
-
-
+	public void setChanceToHit(int chanceToHit) {
+		if (chanceToHit > 0 && chanceToHit <= 100) {
+			this.chanceToHit = chanceToHit;
+		}
+	}
+	
+	public String toString() {
+		String str = this.getName() + " : " + String.valueOf(damage);
+		return str;
+	}
+	@Override
+	public void use() {}
 }

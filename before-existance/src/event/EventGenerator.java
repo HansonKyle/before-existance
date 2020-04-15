@@ -2,9 +2,9 @@ package event;
 
 import java.util.ArrayList;
 import java.util.Random;
-
 import core.Game;
 
+// EventGenerator class creates an arrayList of randomly chosen events
 public class EventGenerator {
 	
 	private final ArrayList<Integer> generatedNumbers = new ArrayList<>();
@@ -12,10 +12,12 @@ public class EventGenerator {
 	
 	private Game game;
 	
+	// General constructor
 	public EventGenerator(Game game) {
 		this.game = game;
 	}
 	
+	// Generates an event based on a random number (no repeated events)
 	public Event generateUniqueEvent() {
 		Event event = null;
 		while (event == null) {

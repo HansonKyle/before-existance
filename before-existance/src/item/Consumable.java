@@ -1,14 +1,21 @@
 package item;
+
+/*
+ * Represents an item that can be consumed/eaten by the player
+ */
 public class Consumable extends Item {
 	
-	//Give name to the consumable
+	// General constructor
 	public Consumable(String name) {
 		super(name);
 	}
 	
-	//Use the consumable
-	@Override
-	public void use() {
-		
+	// Copy constructor
+	public Consumable(Consumable consumable) {
+		this(consumable.getName());
 	}
+
+	// Effects of using the item
+	@Override
+	public void use() {}
 }

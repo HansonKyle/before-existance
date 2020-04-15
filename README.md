@@ -9,14 +9,10 @@ Only with the correct mindset and a bit of luck will you be able to survive the 
 # Versions:
 Latest GUI version of the game can be found in the master and Iteration-4-Final branches.
 
-Master branch: Latest version of code (iteration 4)
-
+master: Latest version of code (iteration 4)
 Iteration-1-Final: Console version of the game only
-
 Iteration-2-Final: First version of GUI
-
 Iteration-3-Final: Same as iteration 2 with bug fixes and more documentation
-
 Iteration-4-Final: Final submission of code. Same as iteration 3 with more documentation
 
 # Setup:

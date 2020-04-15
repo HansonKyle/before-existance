@@ -22,3 +22,12 @@ Iteration-4-Final: Final submission of code. Same as iteration 3 with more docum
 # Setup:
 1. Import a branch into an IDE as a Java project
 3. Run core/Main.java after checkout
+
+# Presenters:
+| | Name(s) |
+|-----------|------|
+|1|Harprabh|
+|2|Brendan|
+|3|Kyle|
+|4|Alex|
+|5|Anil|

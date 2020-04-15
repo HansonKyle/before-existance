@@ -1,10 +1,15 @@
 package entity;
+import java.util.Random;
+
 import item.Weapon;
 
 /*
  * Represents a character in game that can be damaged and is prone to dying
  */
 public abstract class Entity {
+	
+	// Used to generate random integers for determining whether or not player dealt damage successfully/dealt critical damage
+	private final Random ATTACK_RANDOMIZER = new Random();
 	
 	private String name;
 	private int health;
@@ -32,6 +37,20 @@ public abstract class Entity {
 	}
 	
 	public abstract void die();
+	
+	public int attack(Entity target) {
+		int hitRoll = ATTACK_RANDOMIZER.nextInt(100);
+		int critChance = ATTACK_RANDOMIZER.nextInt(100);
+		int damageDealt = 0;
+		if (hitRoll <= getCurrentWeapon().getChanceToHit()) {
+			damageDealt = getCurrentWeapon().getDamage();
+			if (critChance == 1) {
+				damageDealt = damageDealt * 2;
+			}
+			target.removeHealth(damageDealt);
+		}
+		return damageDealt;
+	}
 	
 	@Override
 	public String toString() {

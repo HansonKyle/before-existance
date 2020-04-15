@@ -3,20 +3,24 @@ package item;
 /*
  * Represents an item in the game that can be used to damage other entities
  */
-public class Weapon extends Equippable {
+public class Weapon extends Item {
 	
 	// The amount of health subtracted when weapon is used on another entity
 	private int damage;
-	
+	private int chanceToHit;
+
 	// General constructor
+	public Weapon(String name, int damage, int chanceToHit) {
+		super(name);
+		setDamage(damage);
+		setChanceToHit(chanceToHit);
+	}
+	
+	// General constructor w/default change to hit
 	public Weapon(String name, int damage) {
 		super(name);
-		this.damage = damage;
-	}
-
-	// Copy constructor
-	public Weapon(Weapon weapon) {
-		this(weapon.getName(), weapon.damage);
+		setDamage(damage);
+		setChanceToHit(90);
 	}
 	
 	// Get the damage
@@ -29,7 +33,20 @@ public class Weapon extends Equippable {
 		this.damage = damage;
 	}
 	
-	public String toString() {
-		return this.getName() + " : " + String.valueOf(damage);
+	public int getChanceToHit() {
+		return chanceToHit;
 	}
+	
+	public void setChanceToHit(int chanceToHit) {
+		if (chanceToHit > 0 && chanceToHit <= 100) {
+			this.chanceToHit = chanceToHit;
+		}
+	}
+	
+	public String toString() {
+		String str = this.getName() + " : " + String.valueOf(damage);
+		return str;
+	}
+	@Override
+	public void use() {}
 }

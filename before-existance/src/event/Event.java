@@ -11,8 +11,12 @@ public class Event {
 	private Game game;
 	private String name;
 	private String description;
+	// The result of the event after player makes a choice
 	private String choiceResult;
+	// How much health the player should lose when event ends
 	private int healthLost;
+	// Set to true when the event ends
+	private boolean ended;
 
 	// General constructor
 	public Event(Game game, String name, String description) {
@@ -125,5 +129,13 @@ public class Event {
 
 	public void setHealthLost(int healthLost) {
 		this.healthLost = healthLost;
+	}
+	
+	public boolean getEnded() {
+		return ended;
+	}
+
+	public void setEnded(boolean ended) {
+		this.ended = ended;
 	}
 }

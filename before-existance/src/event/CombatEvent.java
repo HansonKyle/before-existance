@@ -29,7 +29,7 @@ public class CombatEvent extends Event {
 					choiceResult = "Your attack missed!";
 				}
 				if(enemy.getHealth() <= 0) {
-					//setEnded(true);
+					setEnded(true);
 				}
 				int enemyDamage = enemy.attack(player);
 				if (enemyDamage > 0) {
@@ -40,7 +40,7 @@ public class CombatEvent extends Event {
 				}
 				setChoiceResult(choiceResult);
 				if(player.getHealth() <= 0) {
-					//setEnded(true);
+					setEnded(true);
 					player.die();
 				}
 			}
@@ -71,7 +71,7 @@ public class CombatEvent extends Event {
 				}
 				else {
 					setChoiceResult("You got away safely");
-					//setEnded(true);
+					setEnded(true);
 				}
 			}
 		});

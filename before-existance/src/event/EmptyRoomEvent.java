@@ -7,6 +7,7 @@ import core.Game;
  */
 public class EmptyRoomEvent extends Event {
 
+	// General constructor
 	public EmptyRoomEvent(Game game) {
 		super(game, "Empty Room", "This room is empty.");
 		

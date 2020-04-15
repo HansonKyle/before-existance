@@ -6,6 +6,7 @@ import core.Game;
 // Creates an event with 2 choices
 public class FrailSkeletonEvent extends Event {
 
+	// General constructor
 	public FrailSkeletonEvent(Game game) {
 		super(game, "Frail Skeleton", "You come across a frail skeleton.");
 		

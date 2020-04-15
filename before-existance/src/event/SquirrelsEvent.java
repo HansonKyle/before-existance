@@ -5,8 +5,8 @@ import core.Game;
 // Event: Squirrels
 // Creates an event with 2 choices
 public class SquirrelsEvent extends Event {
-
-
+	
+	// General constructor
 	public SquirrelsEvent(Game game) {
 		super(game, "Squirrels", "An army of squirrels lay asleep in the middle of the room. \nIf they get angry there is no survival. \nThere are two doors, one farther than the other.");
 		

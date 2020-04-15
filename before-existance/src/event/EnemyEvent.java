@@ -9,6 +9,7 @@ public class EnemyEvent extends Event {
 	
 	private Enemy enemy;
 
+	// General constructor
 	public EnemyEvent(Game game, Enemy enemy) {
 		super(game, "Enemy Appeared", "A wild " + enemy.getName() + " has appeared!");
 		this.enemy = enemy;

@@ -12,7 +12,7 @@ public abstract class Entity {
 	private HealthBar healthBar;
 	private Weapon currentWeapon;
 	
-	// General Constructor
+	// General constructor
 	public Entity(String name, int healthCap) {
 		this.name = name;
 		this.healthBar = new HealthBar(this);
@@ -20,10 +20,15 @@ public abstract class Entity {
 		this.health = healthCap;
 	}
 	
-	// Copy Constructor
+	// General constructor
 	public Entity(String name, int healthCap,  Weapon currentWeapon) {
 		this(name, healthCap);
 		this.currentWeapon = currentWeapon;
+	}
+	
+	// Copy constructor
+	public Entity(Entity entity) {
+		this(entity.name, entity.healthCap, entity.currentWeapon);
 	}
 	
 	public abstract void die();
@@ -33,15 +38,13 @@ public abstract class Entity {
 		return "| Name: " + name.toUpperCase() + " | " + healthBar.toString() + " |";
 	}
 	
-	//Health related methods
+	// Health related methods
 	
 	public boolean isAlive() {
 		return health > 0;
 	}
 	
-	/**
-	 * Sets health to max value
-	 */
+	// Sets health to max value
 	public void replenishHealth() {
 		this.health = healthCap;
 	}

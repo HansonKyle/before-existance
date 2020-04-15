@@ -1,4 +1,5 @@
 package entity;
+
 import item.Weapon;
 
 public class Enemy extends Entity {

@@ -25,9 +25,7 @@ public class Player extends Entity {
 		super(name, healthCap);
 	}
 	
-	/**
-	 * Print death screen in console
-	 */
+	// Print death screen in console
 	@Override
 	public void die() {
 		System.out.println("\n----------------------------------");

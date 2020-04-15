@@ -6,6 +6,7 @@ import core.Game;
 // Adds event with 2 choices
 public class TreasureEvent extends Event {
 
+	// General constructor
 	public TreasureEvent(Game game) {
 		super(game, "Treasure Chest", "A treasure chest lays in the center of the room.");
 		

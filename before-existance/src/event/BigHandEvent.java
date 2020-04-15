@@ -6,7 +6,7 @@ import core.Game;
 // Creates an event with 3 choices
 public class BigHandEvent extends Event {
 
-	
+	// General constructor
 	public BigHandEvent(Game game) {
 		super(game, "Big Hand", "A big floating hand greets you into the room. It would be polite to greet the hand back.");
 		

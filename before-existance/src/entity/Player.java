@@ -3,8 +3,8 @@ package entity;
 import java.util.ArrayList;
 
 import item.Item;
-import item.Spell;
 import item.Weapon;
+import spell.Spell;
 
 public class Player extends Entity {
 	

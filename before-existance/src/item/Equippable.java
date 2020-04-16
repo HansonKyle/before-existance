@@ -26,8 +26,4 @@ public class Equippable extends Item {
 	public Boolean getEquipState() {
 		return equipState;
 	}
-	
-	// Effects of using the item
-	@Override
-	public void use() {}
 }

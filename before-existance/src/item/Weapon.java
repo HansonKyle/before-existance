@@ -16,7 +16,7 @@ public class Weapon extends Item {
 		setChanceToHit(chanceToHit);
 	}
 	
-	// General constructor w/default chance to hit
+	// General constructor w/default change to hit
 	public Weapon(String name, int damage) {
 		super(name);
 		setDamage(damage);
@@ -47,6 +47,4 @@ public class Weapon extends Item {
 		String str = this.getName() + " : " + String.valueOf(damage);
 		return str;
 	}
-	@Override
-	public void use() {}
 }

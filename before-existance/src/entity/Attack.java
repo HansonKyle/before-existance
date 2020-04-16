@@ -35,7 +35,7 @@ public class Attack {
 	 * When an entity is finished dealing damage, the other entity will attack if they are still alive.
 	 */
 	public void attack(Entity attacker, Entity target) {
-		if (TurnBased.firstTurn()) {
+		if (Math.random() <= 0.5) {
 			// Attacker gets to deal damage before the target
 			target.removeHealth(attacker.getCurrentWeapon().getDamage());
 			if (target.isAlive()) {

@@ -18,9 +18,6 @@ public abstract class Item {
 		this(item.name);
 	}
 	
-	// Each item will have different effects when used
-	public abstract void use();
-	
 	public String getName() {
 		return name;
 	}
